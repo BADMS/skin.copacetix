@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- programs -->
+	<backgroundcolor>$VAR[BackgroundColor]</backgroundcolor>
+	<defaultcontrol always="true">50</defaultcontrol>
+	<menucontrol>3000</menucontrol>
+	<views>50,511,521,531</views>
+	<controls>
+		<!-- Hidden controls -->
+		<control type="button" id="4">
+			<include>HiddenControl</include>
+		</control>
+		<control type="button" id="19">
+			<include>HiddenControl</include>
+		</control>
+		<!-- Fanart -->
+		<include>MenuFadeBackgroundImage</include>
+		<control type="group">
+			<include>OtherInfoHideAnimation</include>
+			<include>Fanart</include>
+		</control>
+		<!-- Main group -->
+		<control type="group" id="9104">
+			<visible>!Control.HasFocus(9000) + !Control.HasFocus(9901) + !Control.HasFocus(608)</visible>
+			<include>WindowFadeAnimation</include>
+			<include>OptionsHideAnimation</include>
+			<!-- Views -->
+			<include>Viewtype_50_List</include>
+			<include>Viewtype_511_FilmstripSquare</include>
+			<include>Viewtype_521_RowSquare</include>
+			<include>Viewtype_531_WallSquare</include>
+			<!-- Scrollbar -->
+			<control type="scrollbar" id="60">
+				<left>980</left>
+				<top>144</top>
+				<width>20</width>
+				<height>896</height>
+				<onleft>50</onleft>
+				<onright>SetFocus(9000)</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<texturesliderbackground colordiffuse="$VAR[UnFocusedColor]">views/white_50.png</texturesliderbackground>
+				<texturesliderbar colordiffuse="$VAR[BackgroundColor]">views/white_70.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="$VAR[BackgroundColor]">views/white_100.png</texturesliderbarfocus>
+				<textureslidernib></textureslidernib>
+				<textureslidernibfocus></textureslidernibfocus>
+				<visible>Control.IsVisible(50)</visible>
+				<include>ScrollBarAnimation</include>
+			</control>
+			<control type="scrollbar" id="60">
+				<bottom>0</bottom>
+				<width>1920</width>
+				<height>20</height>
+				<onup>50</onup>
+				<ondown>SetFocus(9000)</ondown>
+				<showonepage>false</showonepage>
+				<orientation>horizontal</orientation>
+				<texturesliderbackground colordiffuse="$VAR[UnFocusedColor]">views/white_50.png</texturesliderbackground>
+				<texturesliderbar colordiffuse="$VAR[BackgroundColor]">views/white_70.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="$VAR[BackgroundColor]">views/white_100.png</texturesliderbarfocus>
+				<textureslidernib></textureslidernib>
+				<textureslidernibfocus></textureslidernibfocus>
+				<visible>!Control.IsVisible(50)</visible>
+				<include>ScrollBarAnimation</include>
+			</control>
+		</control>
+		<!-- Options -->
+		<control type="image">
+			<include>VisibleFadeAnimation</include>
+			<include>FullscreenDimensions</include>
+			<texture colordiffuse="$VAR[SecondaryColor]">views/white_70.png</texture>
+			<visible>Control.HasFocus(3000)</visible>
+		</control>
+		<control type="fixedlist" id="3000">
+			<left>1030</left>
+			<top>144</top>
+			<width>860</width>
+			<height>896</height>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<onback>50</onback>
+			<onleft condition="String.IsEmpty(Container(3000).ListItem.Property(ActionLeft))">50</onleft>
+			<onright condition="String.IsEmpty(Container(3000).ListItem.Property(ActionRight))">50</onright>
+			<onleft condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionLeft))">$INFO[Container(3000).ListItem.Property(ActionLeft)]</onleft>
+			<onright condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionRight))">$INFO[Container(3000).ListItem.Property(ActionRight)]</onright>
+			<movement>6</movement>
+			<focusposition>6</focusposition>
+			<orientation>vertical</orientation>
+			<viewtype label="535">list</viewtype>
+			<defaultcontrol always="true">0</defaultcontrol>
+			<scrolltime tween="sine" easing="inout">200</scrolltime>
+			<visible allowhiddenfocus="true">Control.HasFocus(3000)</visible>
+			<include>OptionsAnimation</include>
+			<itemlayout height="59" width="860">
+				<control type="label">
+					<width>860</width>
+					<height>59</height>
+					<font>Thin48</font>
+					<textcolor>$VAR[TextColor]</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="70" width="860">
+				<control type="label">
+					<width>860</width>
+					<height>70</height>
+					<font>Light60</font>
+					<textcolor>$VAR[TextColor]</textcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+				</control>
+			</focusedlayout>
+			<content>
+				<!-- Viewmode -->
+				<item>
+					<onclick>SetFocus(50)</onclick>
+					<label>‹ $LOCALIZE[535] ›</label>
+					<label2>$LOCALIZE[31105] | $LOCALIZE[535]</label2>
+					<property name="ActionLeft">Container.PreviousViewMode</property>
+					<property name="ActionRight">Container.NextViewMode</property>
+					<visible>Control.IsVisible(50)</visible>
+				</item>
+				<item>
+					<onclick>SetFocus(500)</onclick>
+					<label>‹ $LOCALIZE[31500] ›</label>
+					<label2>$LOCALIZE[31105] | $LOCALIZE[31500]</label2>
+					<property name="ActionLeft">Container.PreviousViewMode</property>
+					<property name="ActionRight">Container.NextViewMode</property>
+					<visible>Control.IsVisible(500)</visible>
+				</item>
+				<item>
+					<onclick>SetFocus(501)</onclick>
+					<label>‹ $LOCALIZE[31501] ›</label>
+					<label2>$LOCALIZE[31105] | $LOCALIZE[31501]</label2>
+					<property name="ActionLeft">Container.PreviousViewMode</property>
+					<property name="ActionRight">Container.NextViewMode</property>
+					<visible>Control.IsVisible(501)</visible>
+				</item>
+				<item>
+					<onclick>SetFocus(510)</onclick>
+					<label>‹ $LOCALIZE[31510] ›</label>
+					<label2>$LOCALIZE[31105] | $LOCALIZE[31510]</label2>
+					<property name="ActionLeft">Container.PreviousViewMode</property>
+					<property name="ActionRight">Container.NextViewMode</property>
+					<visible>Control.IsVisible(510)</visible>
+				</item>
+				<item>
+					<onclick>SetFocus(511)</onclick>
+					<label>‹ $LOCALIZE[31511] ›</label>
+					<label2>$LOCALIZE[31105] | $LOCALIZE[31511]</label2>
+					<property name="ActionLeft">Container.PreviousViewMode</property>
+					<property name="ActionRight">Container.NextViewMode</property>
+					<visible>Control.IsVisible(511)</visible>
+				</item>
+				<item>
+					<onclick>SetFocus(520)</onclick>
+					<label>‹ $LOCALIZE[31520] ›</label>
+					<label2>$LOCALIZE[31105] | $LOCALIZE[31520]</label2>
+					<property name="ActionLeft">Container.PreviousViewMode</property>
+					<property name="ActionRight">Container.NextViewMode</property>
+					<visible>Control.IsVisible(520)</visible>
+				</item>
+				<item>
+					<onclick>SetFocus(521)</onclick>
+					<label>‹ $LOCALIZE[31521] ›</label>
+					<label2>$LOCALIZE[31105] | $LOCALIZE[31521]</label2>
+					<property name="ActionLeft">Container.PreviousViewMode</property>
+					<property name="ActionRight">Container.NextViewMode</property>
+					<visible>Control.IsVisible(521)</visible>
+				</item>
+				<item>
+					<onclick>SetFocus(522)</onclick>
+					<label>‹ $LOCALIZE[31522] ›</label>
+					<label2>$LOCALIZE[31105] | $LOCALIZE[31522]</label2>
+					<property name="ActionLeft">Container.PreviousViewMode</property>
+					<property name="ActionRight">Container.NextViewMode</property>
+					<visible>Control.IsVisible(522)</visible>
+				</item>
+				<item>
+					<onclick>SetFocus(523)</onclick>
+					<label>‹ $LOCALIZE[31523] ›</label>
+					<label2>$LOCALIZE[31105] | $LOCALIZE[31523]</label2>
+					<property name="ActionLeft">Container.PreviousViewMode</property>
+					<property name="ActionRight">Container.NextViewMode</property>
+					<visible>Control.IsVisible(523)</visible>
+				</item>
+				<item>
+					<onclick>SetFocus(530)</onclick>
+					<label>‹ $LOCALIZE[31530] ›</label>
+					<label2>$LOCALIZE[31105] | $LOCALIZE[31530]</label2>
+					<property name="ActionLeft">Container.PreviousViewMode</property>
+					<property name="ActionRight">Container.NextViewMode</property>
+					<visible>Control.IsVisible(530)</visible>
+				</item>
+				<item>
+					<onclick>SetFocus(531)</onclick>
+					<label>‹ $LOCALIZE[31531] ›</label>
+					<label2>$LOCALIZE[31105] | $LOCALIZE[31531]</label2>
+					<property name="ActionLeft">Container.PreviousViewMode</property>
+					<property name="ActionRight">Container.NextViewMode</property>
+					<visible>Control.IsVisible(531)</visible>
+				</item>
+				<item>
+					<onclick>SetFocus(532)</onclick>
+					<label>‹ $LOCALIZE[31532] ›</label>
+					<label2>$LOCALIZE[31105] | $LOCALIZE[31532]</label2>
+					<property name="ActionLeft">Container.PreviousViewMode</property>
+					<property name="ActionRight">Container.NextViewMode</property>
+					<visible>Control.IsVisible(532)</visible>
+				</item>
+				<item>
+					<onclick>SetFocus(533)</onclick>
+					<label>‹ $LOCALIZE[31533] ›</label>
+					<label2>$LOCALIZE[31105] | $LOCALIZE[31533]</label2>
+					<property name="ActionLeft">Container.PreviousViewMode</property>
+					<property name="ActionRight">Container.NextViewMode</property>
+					<visible>Control.IsVisible(533)</visible>
+				</item>
+				<item>
+					<onclick>SetFocus(534)</onclick>
+					<label>‹ $LOCALIZE[31534] ›</label>
+					<label2>$LOCALIZE[31105] | $LOCALIZE[31534]</label2>
+					<property name="ActionLeft">Container.PreviousViewMode</property>
+					<property name="ActionRight">Container.NextViewMode</property>
+					<visible>Control.IsVisible(534)</visible>
+				</item>
+				<!-- Order -->
+				<item>
+					<onclick>SetFocus(50)</onclick>
+					<label>‹ $LOCALIZE[584] ›</label>
+					<label2>$LOCALIZE[31107] | $LOCALIZE[584]</label2>
+					<property name="ActionLeft">SendClick(4)</property>
+					<property name="ActionRight">SendClick(4)</property>
+					<visible>Control.IsEnabled(4) + Container.SortDirection(ascending)</visible>
+				</item>
+				<item>
+					<onclick>SetFocus(50)</onclick>
+					<label>‹ $LOCALIZE[585] ›</label>
+					<label2>$LOCALIZE[31107] | $LOCALIZE[585]</label2>
+					<property name="ActionLeft">SendClick(4)</property>
+					<property name="ActionRight">SendClick(4)</property>
+					<visible>Control.IsEnabled(4) + Container.SortDirection(descending)</visible>
+				</item>
+				<!-- Filter -->
+				<item>
+					<onclick>SetFocus(50)</onclick>
+					<onclick condition="Container.CanFilter + !Container.CanFilterAdvanced">SetFocus(19)</onclick>
+					<onclick condition="Container.CanFilter + !Container.CanFilterAdvanced">Select</onclick>
+					<onclick condition="Container.CanFilter + !Container.CanFilterAdvanced">SetFocus(50)</onclick>
+					<onclick condition="Container.CanFilterAdvanced">Filter</onclick>
+					<label>587</label>
+					<label2>587</label2>
+					<visible>Container.CanFilter | Container.CanFilterAdvanced</visible>
+				</item>
+			</content>
+		</control>
+		<include>GlobalMenu</include>
+	</controls>
+</window>

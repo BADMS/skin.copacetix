@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- home -->
+	<backgroundcolor>$VAR[BackgroundColor]</backgroundcolor>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onload>
+	<onload>Control.Move(9000,$INFO[Container(9000).CurrentItem,-])</onload>
+	<onload>Control.Move(9000,1)</onload>
+	<controls>
+		<!-- Fanart -->
+		<control type="multiimage" id="7975">
+			<include>FullscreenDimensions</include>
+			<timeperimage>10000</timeperimage>
+			<fadetime>320</fadetime>
+			<randomize>true</randomize>
+			<colordiffuse>$VAR[FanartColor]</colordiffuse>
+			<imagepath background="true">$VAR[HomeBackgroundImage]</imagepath>
+			<animation effect="fade" start="100" end="80" condition="[Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
+		</control>
+		<!-- Main controls -->
+		<include>GlobalMenu</include>
+	</controls>
+</window>

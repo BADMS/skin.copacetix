@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- startup -->
+	<defaultcontrol always="true">10</defaultcontrol>
+	<onload>SetProperty(SEVEN_daemon_set,blur,home)</onload>
+	<onload>SetProperty(FIVE_daemon_set,blur,home)</onload>
+	<onload>Skin.Reset(HideSettings)</onload>
+	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<controls>
+		<control type="button" id="10">
+			<description>trigger</description>
+			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<onfocus condition="System.HasAddon(script.colorbox)">RunScript(script.colorbox,daemon=True)</onfocus>
+			<texturenofocus></texturenofocus>
+			<texturefocus></texturefocus>
+			<visible>!Skin.HasSetting(Use_Startup_Playlist)</visible>
+		</control>
+		<control type="button" id="10">
+			<description>trigger with startup Playlist</description>
+			<onfocus>XBMC.PlayMedia($INFO[Skin.String(Startup_Playlist_Path)])</onfocus>
+			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<onfocus condition="System.HasAddon(script.colorbox)">RunScript(script.colorbox,daemon=True)</onfocus>
+			<texturenofocus></texturenofocus>
+			<texturefocus></texturefocus>
+			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
+		</control>
+		<include>CommonBackground</include>
+	</controls>
+</window>

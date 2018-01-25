@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- mediasource -->
+	<defaultcontrol always="true">10</defaultcontrol>
+	<controls>
+		<!-- Browse Button -->
+		<control type="button" id="11">
+			<left>-10</left>
+			<top>-10</top>
+			<width>1</width>
+			<height>1</height>
+			<onup condition="!String.IsEmpty(Container(10).ListItemNoWrap(-1).Label)">Control.Move(10,-1)</onup>
+			<onup condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">SetFocus(10)</onup>
+			<onup condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">SetFocus(11)</onup>
+			<ondown condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">Control.Move(10,1)</ondown>
+			<ondown condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">SetFocus(10)</ondown>
+			<ondown condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">SetFocus(11)</ondown>
+			<ondown condition="String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">12</ondown>
+			<onleft>10</onleft>
+			<onright>13</onright>
+		</control>
+		<!-- Add Rule Button -->
+		<control type="button" id="13">
+			<left>-10</left>
+			<top>-10</top>
+			<width>1</width>
+			<height>1</height>
+			<onup condition="!String.IsEmpty(Container(10).ListItemNoWrap(-1).Label)">Control.Move(10,-1)</onup>
+			<onup condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">SetFocus(10)</onup>
+			<onup condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">SetFocus(13)</onup>
+			<ondown condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">Control.Move(10,1)</ondown>
+			<ondown condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">SetFocus(10)</ondown>
+			<ondown condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">SetFocus(13)</ondown>
+			<ondown condition="String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">12</ondown>
+			<onleft>11</onleft>
+			<onright>14</onright>
+		</control>
+		<!-- Remove Rule Button -->
+		<control type="button" id="14">
+			<left>-10</left>
+			<top>-10</top>
+			<width>1</width>
+			<height>1</height>
+			<onup condition="!String.IsEmpty(Container(10).ListItemNoWrap(-1).Label)">Control.Move(10,-1)</onup>
+			<onup condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">SetFocus(10)</onup>
+			<onup condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">SetFocus(14)</onup>
+			<ondown condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">Control.Move(10,1)</ondown>
+			<ondown condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">SetFocus(10)</ondown>
+			<ondown condition="!String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">SetFocus(14)</ondown>
+			<ondown condition="String.IsEmpty(Container(10).ListItemNoWrap(1).Label)">12</ondown>
+			<onleft>13</onleft>
+			<ondown>14</ondown>
+			<onright>noop</onright>
+		</control>
+		<!-- Background -->
+		<include>DialogBackgroundImage</include>
+		<!-- Main group -->
+		<control type="group" id="1000">
+			<include content="DialogHeading">
+				<param name="DialogHeaderId" value="2" />
+				<param name="DialogHeaderLabel" value="$LOCALIZE[13406]" />
+			</include>
+			<!-- Grouplist -->
+			<control type="grouplist">
+				<width>1200</width>
+				<itemgap>0</itemgap>
+				<include>DialogGrouplist</include>
+				<!-- Right grouplist -->
+				<control type="list" id="10">
+					<width>1200</width>
+					<height>700</height>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>noop</onup>
+					<ondown>9000</ondown>
+					<onright>11</onright>
+					<scrolltime>0</scrolltime>
+					<itemlayout width="1200" height="100">
+						<control type="image">
+							<width>1200</width>
+							<height>75</height>
+							<texture colordiffuse="$VAR[DisabledColor]">views/white_10.png</texture>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<width>1040</width>
+							<height>75</height>
+							<textcolor>$VAR[TextColor]</textcolor>
+							<selectedcolor>$VAR[TextColor]</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout width="1200" height="100">
+						<control type="group">
+							<height>75</height>
+							<visible>!Control.HasFocus(10) + !Control.HasFocus(11) + !Control.HasFocus(13) + !Control.HasFocus(14)</visible>
+							<control type="image">
+								<width>1200</width>
+								<height>75</height>
+								<texture colordiffuse="$VAR[DisabledColor]">views/white_10.png</texture>
+							</control>
+							<control type="label">
+								<left>10</left>
+								<width>1040</width>
+								<height>75</height>
+								<textcolor>$VAR[TextColor]</textcolor>
+								<selectedcolor>$VAR[TextColor]</selectedcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							<control type="label">
+								<left>10</left>
+								<width>1040</width>
+								<height>75</height>
+								<align>right</align>
+								<textcolor>$VAR[TextColor]</textcolor>
+								<selectedcolor>$VAR[TextColor]</selectedcolor>
+								<label>1024</label>
+							</control>
+						</control>
+						<control type="group">
+							<height>75</height>
+							<visible>Control.HasFocus(10) | Control.HasFocus(11) | Control.HasFocus(13) | Control.HasFocus(14)</visible>
+							<control type="image">
+								<width>1200</width>
+								<height>75</height>
+								<texture colordiffuse="$VAR[BackgroundColor]">views/white_100.png</texture>
+							</control>
+							<control type="label">
+								<left>10</left>
+								<width>1040</width>
+								<height>75</height>
+								<textcolor>$VAR[TextColor]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<selectedcolor>$VAR[TextColor]</selectedcolor>
+								<visible>Control.HasFocus(10)</visible>
+							</control>
+							<control type="label">
+								<left>10</left>
+								<width>1040</width>
+								<height>75</height>
+								<textcolor>$VAR[TextColor]</textcolor>
+								<selectedcolor>$VAR[TextColor]</selectedcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>Control.HasFocus(11) | Control.HasFocus(13) | Control.HasFocus(14)</visible>
+							</control>
+							<control type="label">
+								<left>10</left>
+								<width>1040</width>
+								<height>75</height>
+								<align>right</align>
+								<textcolor>$VAR[TextColor]</textcolor>
+								<selectedcolor>$VAR[TextColor]</selectedcolor>
+								<label>1024</label>
+								<visible>Control.HasFocus(10) | Control.HasFocus(13) | Control.HasFocus(14)</visible>
+							</control>
+							<control type="label">
+								<left>10</left>
+								<width>1040</width>
+								<height>75</height>
+								<align>right</align>
+								<textcolor>$VAR[TextColor]</textcolor>
+								<selectedcolor>$VAR[TextColor]</selectedcolor>
+								<label>1024</label>
+								<visible>Control.HasFocus(11)</visible>
+							</control>
+						</control>
+						<control type="image">
+							<left>1050</left>
+							<width>75</width>
+							<height>75</height>
+							<texture colordiffuse="$VAR[TextColor]">dialogs/add.png</texture>
+							<visible>!Control.HasFocus(13)</visible>
+						</control>
+						<control type="image">
+							<left>1050</left>
+							<width>75</width>
+							<height>75</height>
+							<texture colordiffuse="$VAR[TextColor]">dialogs/add.png</texture>
+							<visible>Control.IsEnabled(13) + Control.HasFocus(13)</visible>
+						</control>
+						<control type="image">
+							<left>1050</left>
+							<width>75</width>
+							<height>75</height>
+							<texture colordiffuse="$VAR[DisabledColor]">dialogs/add.png</texture>
+							<visible>!Control.IsEnabled(13)</visible>
+						</control>
+						<control type="image">
+							<left>1125</left>
+							<width>75</width>
+							<height>75</height>
+							<texture colordiffuse="$VAR[TextColor]">dialogs/delete.png</texture>
+							<visible>!Control.HasFocus(14)</visible>
+						</control>
+						<control type="image">
+							<left>1125</left>
+							<width>75</width>
+							<height>75</height>
+							<texture colordiffuse="$VAR[TextColor]">dialogs/delete.png</texture>
+							<visible>Control.IsEnabled(14) + Control.HasFocus(14)</visible>
+						</control>
+						<control type="image">
+							<left>1125</left>
+							<width>75</width>
+							<height>75</height>
+							<texture colordiffuse="$VAR[DisabledColor]">dialogs/delete.png</texture>
+							<visible>!Control.IsEnabled(14)</visible>
+						</control>
+					</focusedlayout>
+				</control>
+				<!-- Name -->
+				<control type="edit" id="12">
+					<hinttext>1022</hinttext>
+				</control>
+			</control>
+		</control>
+		<include content="DialogButtons">
+			<param name="Button4Visible" value="false" />
+			<param name="Button3Visible" value="false" />
+			<!-- Cancel Button -->
+			<param name="Button2ID" value="19" />
+			<param name="Button2Label" value="X" />
+			<param name="Button2Visible" value="true" />
+			<!-- OK Button -->
+			<param name="Button1ID" value="18" />
+			<param name="Button1Label" value="$LOCALIZE[186]" />
+			<param name="Button1Visible" value="true" />
+		</include>
+	</controls>
+</window>

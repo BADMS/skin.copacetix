@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- addonsettings -->
+	<defaultcontrol always="true">9</defaultcontrol>
+	<controls>
+		<!-- Background -->
+		<include>DialogBackgroundImage</include>
+		<!-- Main group -->
+		<control type="group" id="1000">
+			<include content="DialogHeading">
+				<param name="DialogHeaderId" value="20" />
+				<param name="DialogHeaderLabel" value="-" />
+			</include>
+			<!-- Left grouplist -->
+			<control type="grouplist" id="9">
+				<width>370</width>
+				<height>775</height>
+				<onright>2</onright>
+				<onleft>noop</onleft>
+				<ondown>9000</ondown>
+				<onup>noop</onup>
+				<itemgap>25</itemgap>
+				<scrolltime>0</scrolltime>
+			</control>
+			<!-- Default button -->
+			<control type="button" id="13"/>
+			<!-- Right grouplist -->
+			<control type="grouplist" id="2">
+				<left>430</left>
+				<width>1390</width>
+				<height>775</height>
+				<onleft>9</onleft>
+				<onright>noop</onright>
+				<onup>noop</onup>
+				<ondown>9000</ondown>
+				<itemgap>25</itemgap>
+				<scrolltime>0</scrolltime>
+			</control>
+			<!-- Default button -->
+			<control type="button" id="3"/>
+			<!-- Default radiobutton -->
+			<control type="radiobutton" id="4"/>
+			<!-- Default spincontrolex -->
+			<control type="spincontrolex" id="5"/>
+			<!-- Default label -->
+			<control type="label" id="7">
+				<textcolor>$VAR[SelectedColor]</textcolor>
+			</control>
+			<!-- Default seperator -->
+			<control type="image" id="6">
+				<height>-25</height>
+				<texture></texture>
+			</control>
+			<!-- Default slider -->
+			<control type="sliderex" id="8"/>
+		</control>
+		<include content="DialogButtons">
+			<param name="Button4Visible" value="false" />
+			<!-- Defaults Button -->
+			<param name="Button3ID" value="12" />
+			<param name="Button3Label" value="$LOCALIZE[409]" />
+			<param name="Button3Visible" value="true" />
+			<!-- Cancel Button -->
+			<param name="Button2ID" value="11" />
+			<param name="Button2Label" value="X" />
+			<param name="Button2Visible" value="true" />
+			<!-- OK Button -->
+			<param name="Button1ID" value="10" />
+			<param name="Button1Label" value="$LOCALIZE[186]" />
+			<param name="Button1Visible" value="true" />
+		</include>
+	</controls>
+</window>

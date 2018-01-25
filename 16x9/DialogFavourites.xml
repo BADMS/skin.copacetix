@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- favourites -->
+	<defaultcontrol always="true">450</defaultcontrol>
+	<include>DialogZoomAnimation</include>
+
+	<controls>
+
+		<!-- Background -->
+		<include>DialogBackgroundImage</include>
+
+		<!-- Heading -->
+		<control type="label">
+			<left>150</left>
+			<top>96</top>
+			<width>1620</width>
+			<height>72</height>
+			<font>Font72</font>
+			<label>1036</label>
+		</control>
+
+		<!-- Image -->
+		<control type="image">
+			<left>150</left>
+			<top>225</top>
+			<width>405</width>
+			<height>600</height>
+			<texture>$INFO[Container(450).ListItem.Icon]</texture>
+			<aspectratio aligny="center">keep</aspectratio>
+			<visible>!String.Contains(Container(450).ListItem.Icon,Default)</visible>
+		</control>
+		<control type="image">
+			<left>150</left>
+			<top>225</top>
+			<width>405</width>
+			<height>600</height>
+			<texture>$INFO[Container(450).ListItem.Icon]</texture>
+			<colordiffuse>$VAR[UnFocusedColor]</colordiffuse>
+			<aspectratio aligny="center">keep</aspectratio>
+			<visible>String.Contains(Container(450).ListItem.Icon,Default)</visible>
+		</control>
+
+		<!-- List -->
+		<control type="list" id="450">
+			<left>600</left>
+			<top>235</top>
+			<width>1170</width>
+			<height>576</height>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<onleft>noop</onleft>
+			<onright>noop</onright>
+			<orientation>vertical</orientation>
+			<viewtype label="535">list</viewtype>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="1170" height="58">
+				<control type="label">
+					<width>1170</width>
+					<height>58</height>
+					<font>Font36</font>
+					<textcolor>$VAR[UnFocusedColor]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="1170" height="58">
+				<control type="label">
+					<width>1170</width>
+					<height>58</height>
+					<font>Font36</font>
+					<textcolor>$VAR[FocusedColor]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+
+		</control>
+
+	</controls>
+
+</window>
