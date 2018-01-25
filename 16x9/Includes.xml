@@ -439,9 +439,11 @@
 		<textoffsetx>30</textoffsetx>
 		<textoffsety>9</textoffsety>
 		<textcolor>$VAR[TextColor]</textcolor>
-		<texture></texture>
-		<texturefocus colordiffuse="$VAR[BackgroundColor]">common/white.png</texturefocus>
-		<texturenofocus></texturenofocus>
+		<focusedcolor>$VAR[DiffuseColor]</focusedcolor>
+		<invalidcolor>$VAR[DisabledColor]</invalidcolor>
+		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
+		<texturefocus colordiffuse="$VAR[TextColor]">views/white_20.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[DisabledColor]">views/white_10.png</texturenofocus>
 	</include>
 	<!-- Conq -->
 	<!-- Time -->
