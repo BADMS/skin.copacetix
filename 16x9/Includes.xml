@@ -42,10 +42,10 @@
 				<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
 				<ondown>noop</ondown>
 				<onleft>Control.Move(9001,-1)</onleft>
-				<onleft condition="!String.Contains(ListItem.Property(hasSubmenu),true) + !Window.IsActive(home)">SetFocus(9103)</onleft>
-				<onright condition="!String.Contains(ListItem.Property(hasSubmenu),true) + !Window.IsActive(home)">SetFocus(9103)</onright>
-				<onleft condition="String.Contains(ListItem.Property(hasSubmenu),true)">SetFocus(9001)</onleft>
-				<onright condition="String.Contains(ListItem.Property(hasSubmenu),true)">SetFocus(9001)</onright>
+				<onleft condition="!String.Contains(Container(9000).ListItem.Property(hasSubmenu),true) + !Window.IsActive(home)">SetFocus(9103)</onleft>
+				<onright condition="!String.Contains(Container(9000).ListItem.Property(hasSubmenu),true) + !Window.IsActive(home)">SetFocus(9103)</onright>
+				<onleft condition="String.Contains(Container(9000).ListItem.Property(hasSubmenu),true)">SetFocus(9001)</onleft>
+				<onright condition="String.Contains(Container(9000).ListItem.Property(hasSubmenu),true)">SetFocus(9001)</onright>
 				<pagecontrol>60</pagecontrol>
 				<focusposition>6</focusposition>
 				<orientation>vertical</orientation>
