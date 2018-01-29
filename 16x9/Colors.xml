@@ -16,6 +16,10 @@
 		<value condition="!String.IsEmpty(Window(home).Property(ImageColorFIVE))">$INFO[Window(home).Property(ImageColorFIVE)]</value>
 		<value>$INFO[Skin.String(DiffuseColor)]</value>
 	</variable>
+	<variable name="BorderColor">
+		<value condition="!String.IsEmpty(Window(home).Property(ImageCColorFIVE))">$INFO[Window(home).Property(ImageCColorFIVE)]</value>
+		<value>$INFO[Skin.String(BorderColor)]</value>
+	</variable>
 	<variable name="TextColor">
 		<value condition="!String.IsEmpty(Window(home).Property(ImageCColorFIVE))">$INFO[Window(home).Property(ImageCColorFIVE)]</value>
 		<value>$INFO[Skin.String(TextColor)]</value>

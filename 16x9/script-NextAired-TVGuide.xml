@@ -6,14 +6,14 @@
 		<control type="group">
 			<visible>!String.IsEmpty(Window(Home).Property(TVGuide.BackgroundFanart))</visible>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<control type="image">
+			<control type="image" id="7975">
 				<include>FullscreenDimensions</include>
 				<fadetime>400</fadetime>
 				<texture background="true">$VAR[NextAiredFanart]</texture>
 			</control>
 			<control type="image">
 				<include>FullscreenDimensions</include>
-				<texture colordiffuse="$VAR[DiffuseColor]">views/white_100.png</texture>
+				<texture colordiffuse="$VAR[DiffuseColor]">views/overlay_50.png</texture>
 			</control>
 		</control>
 		<control type="group">
@@ -41,7 +41,6 @@
 				<orientation>horizontal</orientation>
 				<scrolltime tween="sine" easing="inout">360</scrolltime>
 				<control type="group">
-					<visible>!String.Contains(Window(Home).Property(NextAired.200.Wday),) + !String.IsEmpty(Container(200).ListItem.Label)</visible>
 					<width>480</width>
 					<height>1080</height>
 					<control type="label">
@@ -165,7 +164,6 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!String.Contains(Window(Home).Property(NextAired.201.Wday),) + !String.IsEmpty(Container(201).ListItem.Label)</visible>
 					<width>480</width>
 					<height>1080</height>
 					<control type="label">
@@ -289,7 +287,6 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!String.Contains(Window(Home).Property(NextAired.202.Wday),) + !String.IsEmpty(Container(202).ListItem.Label)</visible>
 					<width>480</width>
 					<height>1080</height>
 					<control type="label">
@@ -413,7 +410,6 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!String.Contains(Window(Home).Property(NextAired.203.Wday),) + !String.IsEmpty(Container(203).ListItem.Label)</visible>
 					<width>480</width>
 					<height>1080</height>
 					<control type="label">
@@ -537,7 +533,6 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!String.Contains(Window(Home).Property(NextAired.204.Wday),) + !String.IsEmpty(Container(204).ListItem.Label)</visible>
 					<width>480</width>
 					<height>1080</height>
 					<control type="label">
@@ -661,7 +656,6 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!String.Contains(Window(Home).Property(NextAired.205.Wday),) + !String.IsEmpty(Container(205).ListItem.Label)</visible>
 					<width>480</width>
 					<height>1080</height>
 					<control type="label">
@@ -785,7 +779,6 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!String.Contains(Window(Home).Property(NextAired.206.Wday),) + !String.IsEmpty(Container(206).ListItem.Label)</visible>
 					<width>480</width>
 					<height>1080</height>
 					<control type="label">
@@ -914,10 +907,7 @@
 		<control type="group">
 			<include>VisibleFadeAnimation</include>
 			<visible>Window.IsVisible(1104)</visible>
-			<control type="image">
-				<include>FullscreenDimensions</include>
-				<texture colordiffuse="$VAR[SecondaryColor]">views/white_90.png</texture>
-			</control>
+			<include>MenuFadeBackgroundImage</include>
 			<control type="group">
 				<left>50</left>
 				<width>860</width>

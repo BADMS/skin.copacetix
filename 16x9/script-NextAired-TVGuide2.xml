@@ -6,14 +6,14 @@
 		<control type="group">
 			<visible>!String.IsEmpty(Window(Home).Property(TVGuide.BackgroundFanart))</visible>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<control type="image">
+			<control type="image" id="7975">
 				<include>FullscreenDimensions</include>
 				<fadetime>400</fadetime>
 				<texture background="true">$VAR[NextAiredFanart]</texture>
 			</control>
 			<control type="image">
 				<include>FullscreenDimensions</include>
-				<texture colordiffuse="$VAR[DiffuseColor]">views/white_100.png</texture>
+				<texture colordiffuse="$VAR[DiffuseColor]">views/overlay_50.png</texture>
 			</control>
 		</control>
 		<control type="group">
