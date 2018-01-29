@@ -142,7 +142,7 @@
 						<control type="image">
 							<width>885</width>
 							<height>75</height>
-							<texture colordiffuse="$VAR[ButtonColor]">views/white_100.png</texture>
+							<texture colordiffuse="$VAR[ButtonColor]">views/white_50.png</texture>
 						</control>
 						<control type="label">
 							<left>10</left>
