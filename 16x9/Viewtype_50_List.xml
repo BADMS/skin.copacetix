@@ -71,6 +71,19 @@
 					</control>
 				</focusedlayout>
 			</control>
+			<control type="label">
+				<top>564</top>
+				<left>1045</left>
+				<width>825</width>
+				<height>70</height>
+				<font>Light30Upper</font>
+				<textcolor>$VAR[TextColor]</textcolor>
+				<scroll>true</scroll>
+				<align>left</align>
+				<label>$VAR[LabelNextAiredDetails]</label>
+				<visible>!Window.IsVisible(contextmenu) + !String.Contains(ListItem.Icon,Default) + !Container.Content(episodes) + !Control.HasFocus(3000) + !Container.OnNext + !Container.OnPrevious</visible>
+				<animation effect="fade" start="0" end="100" time="200" delay="800">Visible</animation>
+			</control>
 			<!-- Episode Icon -->
 			<control type="group">
 				<left>1130</left>
