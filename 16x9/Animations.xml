@@ -40,7 +40,7 @@
 	</include>
 	<include name="OtherInfoHideAnimation">
 		<animation type="Conditional" condition="Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsVisible(addoninformation) | Window.IsVisible(contextmenu)" reversible="true">
-			<effect type="fade" start="100" end="0" time="200" tween="cubic" easing="out"/>
+			<effect type="fade" start="100" end="0" time="800" tween="cubic" easing="out"/>
 		</animation>
 	</include>
 	<include name="MediaInfoHideAnimation">

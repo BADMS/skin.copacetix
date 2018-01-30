@@ -52,7 +52,7 @@
 				<height>42</height>
 				<label>480</label>
 				<font>Font42</font>
-				<textcolor>$VAR[FocusedColor]</textcolor>
+				
 			</control>
 			<!-- Videos -->
 			<control type="button">
@@ -60,7 +60,7 @@
 				<height>42</height>
 				<label>3</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
+				
 			</control>
 			<!-- Music -->
 			<control type="button">
@@ -68,7 +68,7 @@
 				<height>42</height>
 				<label>2</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
+				
 			</control>
 			<!-- Pictures -->
 			<control type="button">
@@ -76,7 +76,7 @@
 				<height>42</height>
 				<label>1</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
+				
 			</control>
 			<!-- Weather -->
 			<control type="button">
@@ -84,7 +84,7 @@
 				<height>42</height>
 				<label>8</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
+				
 			</control>
 			<!-- System -->
 			<control type="button">
@@ -92,7 +92,7 @@
 				<height>42</height>
 				<label>13000</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
+				
 			</control>
 			<!-- Service -->
 			<control type="button">
@@ -100,7 +100,7 @@
 				<height>42</height>
 				<label>14036</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
+				
 			</control>
 			<!-- PVR -->
 			<control type="button">
@@ -108,7 +108,7 @@
 				<height>42</height>
 				<label>31015</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
+				
 			</control>
 			<!-- System info -->
 			<control type="button">
@@ -116,7 +116,7 @@
 				<height>42</height>
 				<label>130</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
+				
 			</control>
 			<!-- More -->
 			<control type="button">
@@ -124,7 +124,7 @@
 				<height>42</height>
 				<label>22082</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
+				
 			</control>
 
 		</control>
@@ -144,7 +144,7 @@
 				<height>42</height>
 				<label>166</label>
 				<font>Font33</font>
-				<textcolor>$VAR[FocusedColor]</textcolor>
+				
 			</control>
 			<!-- International -->
 			<control type="button">
@@ -152,7 +152,7 @@
 				<height>42</height>
 				<label>14090</label>
 				<font>Font33</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
+				
 			</control>
 			<!-- File lists -->
 			<control type="button">
@@ -160,7 +160,7 @@
 				<height>42</height>
 				<label>14081</label>
 				<font>Font33</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
+				
 			</control>
 			<!-- Screensaver -->
 			<control type="button">
@@ -168,7 +168,7 @@
 				<height>42</height>
 				<label>360</label>
 				<font>Font33</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
+				
 			</control>
 
 		</control>
@@ -207,7 +207,7 @@
 					<height>42</height>
 					<font>Font33</font>
 					<label>166</label>
-					<textcolor>$VAR[UnFocusedColor]</textcolor>
+					
 				</control>
 				<control type="label">
 					<right>0</right>
@@ -216,7 +216,7 @@
 					<font>Font33</font>
 					<label>Conq</label>
 					<align>right</align>
-					<textcolor>$VAR[UnFocusedColor]</textcolor>
+					
 				</control>
 			</control>
 			<!-- Settings -->
@@ -228,7 +228,7 @@
 					<height>42</height>
 					<font>Font33</font>
 					<label>- $LOCALIZE[21417]</label>
-					<textcolor>$VAR[FocusedColor]</textcolor>
+					
 				</control>
 			</control>
 			<!-- Theme -->
@@ -275,7 +275,7 @@
 					<height>42</height>
 					<font>Font33</font>
 					<label>- $LOCALIZE[14078]</label>
-					<textcolor>$VAR[UnFocusedColor]</textcolor>
+					
 				</control>
 				<control type="label">
 					<right>75</right>
@@ -284,7 +284,7 @@
 					<font>Font33</font>
 					<label>15109</label>
 					<align>right</align>
-					<textcolor>$VAR[UnFocusedColor]</textcolor>
+					
 				</control>
 				<control type="image">
 					<right>35</right>
@@ -310,7 +310,7 @@
 					<height>42</height>
 					<font>Font33</font>
 					<label>- $LOCALIZE[13303]</label>
-					<textcolor>$VAR[UnFocusedColor]</textcolor>
+					
 				</control>
 				<control type="label">
 					<right>75</right>
@@ -319,7 +319,7 @@
 					<font>Font33</font>
 					<label>13278</label>
 					<align>right</align>
-					<textcolor>$VAR[UnFocusedColor]</textcolor>
+					
 				</control>
 				<control type="image">
 					<right>35</right>
@@ -345,7 +345,7 @@
 					<height>42</height>
 					<font>Font33</font>
 					<label>- $LOCALIZE[20109]</label>
-					<textcolor>$VAR[UnFocusedColor]</textcolor>
+					
 				</control>
 				<control type="label">
 					<right>75</right>
@@ -354,7 +354,7 @@
 					<font>Font33</font>
 					<label>0 %</label>
 					<align>right</align>
-					<textcolor>$VAR[UnFocusedColor]</textcolor>
+					
 				</control>
 				<control type="image">
 					<right>35</right>
@@ -380,7 +380,7 @@
 					<height>42</height>
 					<font>Font33</font>
 					<label>$LOCALIZE[512]</label>
-					<textcolor>$VAR[UnFocusedColor]</textcolor>
+					
 				</control>
 				<control type="label">
 					<right>75</right>
@@ -389,7 +389,7 @@
 					<font>Font33</font>
 					<label>513</label>
 					<align>right</align>
-					<textcolor>$VAR[UnFocusedColor]</textcolor>
+					
 				</control>
 				<control type="image">
 					<right>35</right>
@@ -415,7 +415,7 @@
 					<height>42</height>
 					<font>Font33</font>
 					<label>$LOCALIZE[15108]</label>
-					<textcolor>$VAR[UnFocusedColor]</textcolor>
+					
 				</control>
 				<control type="label">
 					<right>75</right>
@@ -424,7 +424,7 @@
 					<font>Font33</font>
 					<label>15109</label>
 					<align>right</align>
-					<textcolor>$VAR[UnFocusedColor]</textcolor>
+					
 				</control>
 				<control type="image">
 					<right>35</right>
@@ -461,7 +461,7 @@
 			<width>970</width>
 			<height>118</height>
 			<label>36104</label>
-			<textcolor>$VAR[FocusedColor]</textcolor>
+			
 			<shadowcolor>$VAR[DisabledColor]</shadowcolor>
 		</control>
 

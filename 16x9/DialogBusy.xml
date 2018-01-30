@@ -20,7 +20,7 @@
 				<centerleft>50%</centerleft>
 				<width>680</width>
 				<height>220</height>
-				<texture border="20" colordiffuse="$VAR[BackgroundColor]">dialogs/DialogBackground.png</texture>
+				<texture border="20" colordiffuse="$VAR[FocusedColor]">views/overlay_50.png</texture>
 			</control>
 
 			<!-- Heading -->

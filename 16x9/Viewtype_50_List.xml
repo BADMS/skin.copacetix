@@ -72,6 +72,7 @@
 				</focusedlayout>
 			</control>
 			<control type="label">
+				<include>MediaInfoHideAnimation</include>
 				<top>564</top>
 				<left>1045</left>
 				<width>825</width>
@@ -89,7 +90,7 @@
 				<left>1130</left>
 				<top>360</top>
 				<width>640</width>
-				<visible>!String.Contains(ListItem.Icon,Default) + !Window.IsVisible(movieinformation) + [Container.Content(episodes) | Window.IsVisible(pictures)]</visible>
+				<visible>!Window.IsVisible(contextmenu) + !String.Contains(ListItem.Icon,Default) + !Window.IsVisible(movieinformation) + [Container.Content(episodes) | Window.IsVisible(pictures)]</visible>
 				<control type="image">
 					<left>10</left>
 					<top>10</top>

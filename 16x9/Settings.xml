@@ -33,8 +33,8 @@
 				<height>42</height>
 				<label>14206</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
-				<focusedcolor>$VAR[FocusedColor]</focusedcolor>
+				
+				
 				<texturenofocus></texturenofocus>
 				<onclick>ActivateWindow(InterfaceSettings)</onclick>
 				<onright>ActivateWindow(InterfaceSettings)</onright>
@@ -46,8 +46,6 @@
 				<height>42</height>
 				<label>14022</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
-				<focusedcolor>$VAR[FocusedColor]</focusedcolor>
 				<texturenofocus></texturenofocus>
 				<onclick>ActivateWindow(MediaSettings)</onclick>
 				<onright>ActivateWindow(MediaSettings)</onright>
@@ -59,8 +57,6 @@
 				<height>42</height>
 				<label>14200</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
-				<focusedcolor>$VAR[FocusedColor]</focusedcolor>
 				<texturenofocus></texturenofocus>
 				<onclick>ActivateWindow(PlayerSettings)</onclick>
 				<onright>ActivateWindow(PlayerSettings)</onright>
@@ -72,8 +68,8 @@
 				<height>42</height>
 				<label>24001</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
-				<focusedcolor>$VAR[FocusedColor]</focusedcolor>
+				
+				
 				<texturenofocus></texturenofocus>
 				<onclick>ActivateWindow(addonbrowser)</onclick>
 				<onright>ActivateWindow(addonbrowser)</onright>
@@ -85,8 +81,8 @@
 				<height>42</height>
 				<label>13000</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
-				<focusedcolor>$VAR[FocusedColor]</focusedcolor>
+				
+				
 				<texturenofocus></texturenofocus>
 				<onclick>ActivateWindow(systemsettings)</onclick>
 				<onright>ActivateWindow(systemsettings)</onright>
@@ -98,8 +94,8 @@
 				<height>42</height>
 				<label>14036</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
-				<focusedcolor>$VAR[FocusedColor]</focusedcolor>
+				
+				
 				<texturenofocus></texturenofocus>
 				<onclick>ActivateWindow(servicesettings)</onclick>
 				<onright>ActivateWindow(servicesettings)</onright>
@@ -111,8 +107,8 @@
 				<height>42</height>
 				<label>13200</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
-				<focusedcolor>$VAR[FocusedColor]</focusedcolor>
+				
+				
 				<texturenofocus></texturenofocus>
 				<onclick>ActivateWindow(profiles)</onclick>
 				<onright>ActivateWindow(profiles)</onright>
@@ -124,8 +120,8 @@
 				<height>42</height>
 				<label>7</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
-				<focusedcolor>$VAR[FocusedColor]</focusedcolor>
+				
+				
 				<texturenofocus></texturenofocus>
 				<onclick>ActivateWindow(filemanager)</onclick>
 				<onright>ActivateWindow(filemanager)</onright>
@@ -137,15 +133,15 @@
 				<height>42</height>
 				<label>130</label>
 				<font>Font42</font>
-				<textcolor>$VAR[UnFocusedColor]</textcolor>
-				<focusedcolor>$VAR[FocusedColor]</focusedcolor>
+				
+				
 				<texturenofocus></texturenofocus>
 				<onclick>ActivateWindow(systeminfo)</onclick>
 				<onright>ActivateWindow(systeminfo)</onright>
 				<animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
 			</control>
 			<!-- Settings level -->
-			<!--control type="button" id="20"><width>300</width><height>42</height><label>10037</label><font>Font42</font><textcolor>$VAR[UnFocusedColor]</textcolor><focusedcolor>$VAR[FocusedColor]</focusedcolor><texturenofocus></texturenofocus><onclick>SettingsLevelChange</onclick><animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation></control-->
+			<!--control type="button" id="20"><width>300</width><height>42</height><label>10037</label><font>Font42</font><texturenofocus></texturenofocus><onclick>SettingsLevelChange</onclick><animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation></control-->
 		</control>
 	</controls>
 </window>
