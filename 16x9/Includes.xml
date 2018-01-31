@@ -492,18 +492,18 @@
 		<control type="togglebutton" id="1">
 			<width>60</width>
 			<height>60</height>
-			<texturefocus>osd/OSDPauseFO.png</texturefocus>
-			<texturenofocus>osd/OSDPauseNF.png</texturenofocus>
+			<texturefocus colordiffuse="$VAR[FocusedColor]">osd/OSDPauseFO.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[UnFocusedColor]">osd/OSDPauseNF.png</texturenofocus>
 			<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-			<alttexturefocus>osd/OSDPlayFO.png</alttexturefocus>
-			<alttexturenofocus>osd/OSDPlayNF.png</alttexturenofocus>
+			<alttexturefocus colordiffuse="$VAR[FocusedColor]">osd/OSDPlayFO.png</alttexturefocus>
+			<alttexturenofocus colordiffuse="$VAR[UnFocusedColor]">osd/OSDPlayNF.png</alttexturenofocus>
 			<onclick>PlayerControl(Play)</onclick>
 		</control>
 		<control type="button" id="2">
 			<width>60</width>
 			<height>60</height>
-			<texturefocus>osd/OSDStopFO.png</texturefocus>
-			<texturenofocus>osd/OSDStopNF.png</texturenofocus>
+			<texturefocus colordiffuse="$VAR[FocusedColor]">osd/OSDStopFO.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[UnFocusedColor]">osd/OSDStopNF.png</texturenofocus>
 			<onclick>PlayerControl(Stop)</onclick>
 		</control>
 	</include>
@@ -512,8 +512,8 @@
 		<control type="button" id="1">
 			<width>60</width>
 			<height>60</height>
-			<texturefocus>osd/OSDStopFO.png</texturefocus>
-			<texturenofocus>osd/OSDStopNF.png</texturenofocus>
+			<texturefocus colordiffuse="$VAR[FocusedColor]">osd/OSDStopFO.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[UnFocusedColor]">osd/OSDStopNF.png</texturenofocus>
 			<onclick>PlayerControl(Stop)</onclick>
 		</control>
 	</include>

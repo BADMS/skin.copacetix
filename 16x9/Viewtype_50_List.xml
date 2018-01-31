@@ -71,6 +71,7 @@
 					</control>
 				</focusedlayout>
 			</control>
+			<!-- Next Aired Details -->
 			<control type="label">
 				<include>MediaInfoHideAnimation</include>
 				<top>564</top>
@@ -83,6 +84,21 @@
 				<align>left</align>
 				<label>$VAR[LabelNextAiredDetails]</label>
 				<visible>!Window.IsVisible(contextmenu) + !String.Contains(ListItem.Icon,Default) + !Container.Content(episodes) + !Control.HasFocus(3000) + !Container.OnNext + !Container.OnPrevious</visible>
+				<animation effect="fade" start="0" end="100" time="200" delay="800">Visible</animation>
+			</control>
+			<!-- Star Rating -->
+			<control type="image">
+				<include>MediaInfoHideAnimation</include>
+				<top>564</top>
+				<left>1045</left>
+				<width>147</width>
+				<height>70</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<aspectratio>keep</aspectratio>
+				<texture colordiffuse="$VAR[TextColor]">$VAR[StarRating]</texture>
+				<visible>!Listitem.DBType(season)</visible>
+				<visible>!Window.IsVisible(contextmenu) + !String.Contains(ListItem.Icon,Default) + Container.Content(movies) + !Control.HasFocus(3000) + !Container.OnNext + !Container.OnPrevious</visible>
 				<animation effect="fade" start="0" end="100" time="200" delay="800">Visible</animation>
 			</control>
 			<!-- Episode Icon -->
