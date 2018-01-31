@@ -442,7 +442,7 @@
 		<focusedcolor>$VAR[DiffuseColor]</focusedcolor>
 		<invalidcolor>$VAR[DisabledColor]</invalidcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-		<texturefocus colordiffuse="$VAR[TextColor]">views/white_20.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[TextColor]">views/white_10.png</texturefocus>
 		<texturenofocus colordiffuse="$VAR[DisabledColor]">views/white_10.png</texturenofocus>
 	</include>
 	<!-- Conq -->

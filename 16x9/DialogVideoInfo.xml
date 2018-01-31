@@ -160,14 +160,7 @@
 					<control type="button" id="99">
 						<include>DialogButton</include>
 						<label>31142</label>
-						<onclick condition="System.HasAddon(script.toolbox) + System.HasAddon(script.artwork.beef)">SetProperty(Dialog.NumItems,2)</onclick>
-						<onclick condition="System.HasAddon(script.toolbox) + System.HasAddon(script.artwork.beef)">SetProperty(Dialog.1.Label,Default Scraper)</onclick>
-						<onclick condition="System.HasAddon(script.toolbox) + System.HasAddon(script.artwork.beef)">SetProperty(Dialog.1.BuiltIn,SendClick(movieinformation,10))</onclick>
-						<onclick condition="System.HasAddon(script.toolbox) + System.HasAddon(script.artwork.beef)">SetProperty(Dialog.2.Label,Artwork Downloader)</onclick>
-						<onclick condition="System.HasAddon(script.toolbox) + System.HasAddon(script.artwork.beef) + Listitem.DBType(tvshow)">SetProperty(Dialog.2.BuiltIn,RunScript(script.artwork.beef, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID]))</onclick>
-						<onclick condition="System.HasAddon(script.toolbox) + System.HasAddon(script.artwork.beef) + Listitem.DBType(movie)">SetProperty(Dialog.2.BuiltIn,RunScript(script.artwork.beef, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID]))</onclick>
-						<onclick condition="System.HasAddon(script.toolbox) + System.HasAddon(script.artwork.beef)">RunScript(script.toolbox,info=selectdialog,header=Choose method)</onclick>
-						<onclick condition="!System.HasAddon(script.toolbox) | !System.HasAddon(script.artwork.beef)]">SendClick(movieinformation,10)</onclick>
+						<onclick>SendClick(10)</onclick>
 					</control>
 					<!-- Cast Button -->
 					<control type="button" id="98">

@@ -20,48 +20,52 @@
 				<visible>String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,special://) | String.Contains(Container.FolderPath,addons://) | String.Contains(Container.FolderPath,musicdb://) | String.Contains(Container.FolderPath,androidapp://)</visible>
 				<include>MediaInfoHideAnimation</include>
 				<itemlayout height="540" width="540">
-					<control type="image">
-						<width>540</width>
-						<height>540</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<visible>String.Contains(ListItem.Icon,Default)</visible>
-					</control>
 					<control type="group">
-						<visible>!String.Contains(ListItem.Icon,Default)</visible>
+						<visible>!Window.IsVisible(contextmenu)</visible>
 						<control type="image">
 							<width>540</width>
 							<height>540</height>
-							<texture background="true">$INFO[ListItem.Art(discart)]</texture>
-							<visible>!String.IsEmpty(ListItem.Art(discart))</visible>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<visible>String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="group">
-							<visible>String.IsEmpty(ListItem.Art(discart))</visible>
+							<visible>!String.Contains(ListItem.Icon,Default)</visible>
 							<control type="image">
 								<width>540</width>
 								<height>540</height>
-								<aspectratio scalediffuse="false">scale</aspectratio>
-								<texture background="true" diffuse="views/discart_overlay_diffuse.png">$VAR[DiscArtImage]</texture>
+								<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+								<visible>!String.IsEmpty(ListItem.Art(discart))</visible>
 							</control>
-							<control type="image">
-								<left>141</left>
-								<top>390</top>
-								<width>258</width>
-								<height>100</height>
-								<aspectratio scalediffuse="false">keep</aspectratio>
-								<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+							<control type="group">
+								<visible>String.IsEmpty(ListItem.Art(discart))</visible>
+								<control type="image">
+									<width>540</width>
+									<height>540</height>
+									<aspectratio scalediffuse="false">scale</aspectratio>
+									<texture background="true" diffuse="views/discart_overlay_diffuse.png">$VAR[DiscArtImage]</texture>
+								</control>
+								<control type="image">
+									<left>141</left>
+									<top>390</top>
+									<width>258</width>
+									<height>100</height>
+									<aspectratio scalediffuse="false">keep</aspectratio>
+									<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+								</control>
+								<control type="image">
+									<width>540</width>
+									<height>540</height>
+									<texture>views/discart_overlay.png</texture>
+								</control>
 							</control>
 							<control type="image">
 								<width>540</width>
 								<height>540</height>
-								<texture>views/discart_overlay.png</texture>
+								<texture colordiffuse="$VAR[DiffuseColor]" diffuse="views/discart_diffuse.png">views/white_50.png</texture>
 							</control>
+							<include>DiscWatchedIndicator</include>
 						</control>
-						<control type="image">
-							<width>540</width>
-							<height>540</height>
-							<texture colordiffuse="$VAR[DiffuseColor]" diffuse="views/discart_diffuse.png">views/white_50.png</texture>
-						</control>
-						<include>DiscWatchedIndicator</include>
+						<animation effect="fade" start="0" end="100" time="200" delay="0">Visible</animation>
 					</control>
 				</itemlayout>
 				<focusedlayout height="540" width="540">
