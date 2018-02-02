@@ -490,36 +490,36 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="Video_Source">
-		<value condition="substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,blu-ray) | substring(ListItem.FilenameAndPath,brrip) | substring(ListItem.FilenameAndPath,bdrip) | substring(ListItem.FilenameAndPath,.m2ts,Right) | substring(ListItem.FilenameAndPath,.bdmv,Right) | substring(ListItem.FilenameAndPathAndPath,bd25) | substring(ListItem.FilenameAndPathAndPath,bd50)">flags/source/bluray.png</value>
-		<value condition="substring(ListItem.FilenameAndPath,hddvd) | substring(ListItem.FilenameAndPath,hd-dvd) | substring(ListItem.FilenameAndPath,.evo,Right)">flags/source/hddvd.png</value>
-		<value condition="substring(ListItem.FilenameAndPath,.ifo,Right) | substring(ListItem.FilenameAndPath,.iso,Right) | substring(ListItem.FilenameAndPath,dvd)">flags/source/dvd.png</value>
-		<value condition="substring(ListItem.FilenameAndPath,web) + [substring(ListItem.FilenameAndPath,dl) | substring(ListItem.FilenameAndPath,rip)]">flags/source/webtv.png</value>
-		<value condition="substring(ListItem.FilenameAndPath,hd) + substring(ListItem.FilenameAndPath,tv)">flags/source/hdtv.png</value>
-		<value condition="[substring(ListItem.FilenameAndPath,sd) + substring(ListItem.FilenameAndPath,tv)] | [substring(ListItem.FilenameAndPath,pd) + substring(ListItem.FilenameAndPath,tv)] | substring(ListItem.FilenameAndPath,dsr)">flags/source/sdtv.png</value>
-		<value condition="substring(ListItem.FilenameAndPath,divx)">flags/source/divx.png</value>
-		<value condition="substring(ListItem.FilenameAndPath,vhs)">flags/source/vhs.png</value>
-		<value condition="substring(ListItem.FilenameAndPath,dvhs)">flags/source/dvhs.png</value>
-		<value condition="substring(ListItem.FilenameAndPath,dtheater)">flags/source/dtheater.png</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,blu-ray) | String.Contains(ListItem.FilenameAndPath,brrip) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,.m2ts,Right) | String.Contains(ListItem.FilenameAndPath,.bdmv,Right) | String.Contains(ListItem.FilenameAndPathAndPath,bd25) | String.Contains(ListItem.FilenameAndPathAndPath,bd50)">flags/source/bluray.png</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,hddvd) | String.Contains(ListItem.FilenameAndPath,hd-dvd) | String.Contains(ListItem.FilenameAndPath,.evo,Right)">flags/source/hddvd.png</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,.ifo,Right) | String.Contains(ListItem.FilenameAndPath,.iso,Right) | String.Contains(ListItem.FilenameAndPath,dvd)">flags/source/dvd.png</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,web) + [String.Contains(ListItem.FilenameAndPath,dl) | String.Contains(ListItem.FilenameAndPath,rip)]">flags/source/webtv.png</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,hd) + String.Contains(ListItem.FilenameAndPath,tv)">flags/source/hdtv.png</value>
+		<value condition="[String.Contains(ListItem.FilenameAndPath,sd) + String.Contains(ListItem.FilenameAndPath,tv)] | [String.Contains(ListItem.FilenameAndPath,pd) + String.Contains(ListItem.FilenameAndPath,tv)] | String.Contains(ListItem.FilenameAndPath,dsr)">flags/source/sdtv.png</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,divx)">flags/source/divx.png</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,vhs)">flags/source/vhs.png</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,dvhs)">flags/source/dvhs.png</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,dtheater)">flags/source/dtheater.png</value>
 		<value condition="!String.IsEmpty(ListItem.VideoCodec)">flags/videocodec/$INFO[ListItem.VideoCodec].png</value>
 	</variable>
 	<variable name="Info_Certificate">
-		<value condition="substring(ListItem.mpaa,Rated ,Left)">$INFO[ListItem.mpaa,flags/rating/,.png]</value>
-		<value condition="substring(ListItem.mpaa,TV-,Left)">$INFO[ListItem.mpaa,flags/rating/,.png]</value>
-		<value condition="substring(ListItem.mpaa,U)">flags/rating/bbfc_u.png</value>
-		<value condition="substring(ListItem.mpaa,PG)">flags/rating/bbfc_pg.png</value>
-		<value condition="substring(ListItem.mpaa,12)">flags/rating/bbfc_12.png</value>
-		<value condition="substring(ListItem.mpaa,15)">flags/rating/bbfc_15.png</value>
-		<value condition="substring(ListItem.mpaa,18) | substring(ListItem.mpaa,UK:X)">flags/rating/bbfc_18.png</value>
-		<value condition="substring(ListItem.mpaa,Germany:0) | substring(ListItem.mpaa,o.A)">flags/rating/FSK-0_info.png</value>
-		<value condition="substring(ListItem.mpaa,Germany:6) | substring(ListItem.mpaa,ab 6)">flags/rating/FSK-6_info.png</value>
-		<value condition="substring(ListItem.mpaa,Germany:12) | substring(ListItem.mpaa,ab 12)">flags/rating/FSK-12_info.png</value>
-		<value condition="substring(ListItem.mpaa,Germany:16) | substring(ListItem.mpaa,ab 16)">flags/rating/FSK-16_info.png</value>
-		<value condition="substring(ListItem.mpaa,Germany:18) | substring(ListItem.mpaa,ab 18)">flags/rating/FSK-18_info.png</value>
-		<value condition="substring(ListItem.mpaa,Australia:R)">flags/rating/australia_r.png</value>
-		<value condition="substring(ListItem.mpaa,Australia:M) + ! substring(ListItem.mpaa,Australia:MA)">flags/rating/australia_m.png</value>
-		<value condition="substring(ListItem.mpaa,Australia:MA)">flags/rating/australia_ma.png</value>
-		<value condition="substring(ListItem.mpaa,Australia:PG)">flags/rating/australia_pg.png</value>
-		<value condition="substring(ListItem.mpaa,Australia:G)">flags/rating/australia_g.png</value>
+		<value condition="String.Contains(ListItem.mpaa,Rated ,Left)">$INFO[ListItem.mpaa,flags/rating/,.png]</value>
+		<value condition="String.Contains(ListItem.mpaa,TV-,Left)">$INFO[ListItem.mpaa,flags/rating/,.png]</value>
+		<value condition="String.Contains(ListItem.mpaa,U)">flags/rating/bbfc_u.png</value>
+		<value condition="String.Contains(ListItem.mpaa,PG)">flags/rating/bbfc_pg.png</value>
+		<value condition="String.Contains(ListItem.mpaa,12)">flags/rating/bbfc_12.png</value>
+		<value condition="String.Contains(ListItem.mpaa,15)">flags/rating/bbfc_15.png</value>
+		<value condition="String.Contains(ListItem.mpaa,18) | String.Contains(ListItem.mpaa,UK:X)">flags/rating/bbfc_18.png</value>
+		<value condition="String.Contains(ListItem.mpaa,Germany:0) | String.Contains(ListItem.mpaa,o.A)">flags/rating/FSK-0_info.png</value>
+		<value condition="String.Contains(ListItem.mpaa,Germany:6) | String.Contains(ListItem.mpaa,ab 6)">flags/rating/FSK-6_info.png</value>
+		<value condition="String.Contains(ListItem.mpaa,Germany:12) | String.Contains(ListItem.mpaa,ab 12)">flags/rating/FSK-12_info.png</value>
+		<value condition="String.Contains(ListItem.mpaa,Germany:16) | String.Contains(ListItem.mpaa,ab 16)">flags/rating/FSK-16_info.png</value>
+		<value condition="String.Contains(ListItem.mpaa,Germany:18) | String.Contains(ListItem.mpaa,ab 18)">flags/rating/FSK-18_info.png</value>
+		<value condition="String.Contains(ListItem.mpaa,Australia:R)">flags/rating/australia_r.png</value>
+		<value condition="String.Contains(ListItem.mpaa,Australia:M) + ! String.Contains(ListItem.mpaa,Australia:MA)">flags/rating/australia_m.png</value>
+		<value condition="String.Contains(ListItem.mpaa,Australia:MA)">flags/rating/australia_ma.png</value>
+		<value condition="String.Contains(ListItem.mpaa,Australia:PG)">flags/rating/australia_pg.png</value>
+		<value condition="String.Contains(ListItem.mpaa,Australia:G)">flags/rating/australia_g.png</value>
 	</variable>
 	<!-- Conq -->
 	<variable name="HeadingLabel">

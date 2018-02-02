@@ -63,7 +63,7 @@
 				<effect type="zoom" start="100" end="90" center="auto" easing="in" time="200"/>
 				<effect type="fade" start="100" end="0" time="200"/>
 			</animation>
-			<visible>IntegerGreaterThan(MusicPlayer.PlaylistLength,0)</visible>
+			<visible>Integer.IsGreater(MusicPlayer.PlaylistLength,0)</visible>
 
 			<!-- Background -->
 			<control type="image">

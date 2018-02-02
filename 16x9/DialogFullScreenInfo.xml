@@ -103,7 +103,7 @@
 				<top>870</top>
 				<width>140</width>
 				<height>60</height>
-				<visible>[Player.DisplayAfterSeek + IntegerGreaterThan(Player.ChapterCount,0)] | IntegerGreaterThan(MusicPlayer.PlaylistLength,0)</visible>
+				<visible>[Player.DisplayAfterSeek + Integer.IsGreater(Player.ChapterCount,0)] | Integer.IsGreater(MusicPlayer.PlaylistLength,0)</visible>
 
 				<!-- Background -->
 				<control type="image">
