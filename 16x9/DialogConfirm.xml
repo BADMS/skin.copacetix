@@ -33,21 +33,42 @@
 					<textcolor>$VAR[TextColor]</textcolor>
 				</control>
 			</control>
-			<include content="DialogButtons">
-				<param name="Button4Visible" value="false" />
-				<!-- Custom Button -->
-				<param name="Button3ID" value="12" />
-				<param name="Button3Label" value="-" />
-				<param name="Button3Visible" value="true" />
-				<!-- Cancel Button -->
-				<param name="Button2ID" value="10" />
-				<param name="Button2Label" value="X" />
-				<param name="Button2Visible" value="true" />
-				<!-- OK Button -->
-				<param name="Button1ID" value="11" />
-				<param name="Button1Label" value="$LOCALIZE[186]" />
-				<param name="Button1Visible" value="true" />
-			</include>
+			<control type="grouplist" id="9000">
+				<right>50</right>
+				<bottom>50</bottom>
+				<width>1200</width>
+				<height>75</height>
+				<itemgap>0</itemgap>
+				<onleft>1000</onleft>
+				<onright>noop</onright>
+				<onup>1000</onup>
+				<ondown>noop</ondown>
+				<align>right</align>
+				<orientation>horizontal</orientation>
+				<include>DialogAnimation</include>
+				<control type="button" id="12">
+					<width>auto</width>
+					<align>center</align>
+					<textoffsetx>40</textoffsetx>
+					<label>$PARAM[Button3Label]</label>
+					<texturenofocus></texturenofocus>
+				</control>
+				<control type="button" id="10">
+					<width>auto</width>
+					<align>center</align>
+					<textoffsetx>40</textoffsetx>
+					<label>X</label>
+					<texturenofocus></texturenofocus>
+				</control>
+				<control type="button" id="11">
+					<width>auto</width>
+					<align>center</align>
+					<textoffsetx>40</textoffsetx>
+					<label>$LOCALIZE[186]</label>
+					<texturenofocus></texturenofocus>
+					<onclick condition="String.IsEmpty(Window(home).Property(copacetix_loaded))">ReplaceWindow(StartUp.xml)</onclick>
+				</control>
+			</control>
 		</control>
 	</controls>
 </window>

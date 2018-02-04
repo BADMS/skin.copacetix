@@ -2,6 +2,7 @@
 <window>
 	<!-- startup -->
 	<defaultcontrol always="true">10</defaultcontrol>
+	<onload>SetProperty(copacetix_loaded,True,home)</onload>
 	<onload>SetProperty(SEVEN_daemon_set,blur,home)</onload>
 	<onload>SetProperty(FIVE_daemon_set,blur,home)</onload>
 	<onload>Skin.Reset(HideSettings)</onload>
