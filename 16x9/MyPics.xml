@@ -36,7 +36,7 @@
 				<fadetime>400</fadetime>
 				<aspectratio>scale</aspectratio>
 				<colordiffuse>$VAR[FanartColor]</colordiffuse>
-				<texture fallback="empty" background="true">$VAR[PictureFanart]</texture>
+				<texture background="true">$VAR[PictureFanart]</texture>
 			</control>
 			<control type="image">
 				<include>FullscreenDimensions</include>

@@ -157,6 +157,7 @@
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture colordiffuse="$VAR[BackgroundColor]">views/white_100.png</texture>
+			<fadetime>400</fadetime>
 		</control>
 	</include>
 	<!-- Fullscreen dimensions -->
@@ -170,14 +171,15 @@
 	<include name="Fanart">
 		<!-- global background -->
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" condition="!Control.IsVisible(50) | String.Contains(ListItem.Icon,Default) | String.Contains(Control.GetLabel(7975),empty)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" condition="!Control.IsVisible(50) | String.Contains(ListItem.Icon,Default) | String.IsEmpty(Control.GetLabel(7975))">Conditional</animation>
 			<control type="image" id="7975">
 				<include>FullscreenDimensions</include>
 				<fadetime>400</fadetime>
-				<texture fallback="empty" background="true" colordiffuse="$VAR[DiffuseColor]">$VAR[Fanart]</texture>
+				<texture background="true" colordiffuse="$VAR[DiffuseColor]">$VAR[Fanart]</texture>
 			</control>
 			<control type="image">
 				<include>FullscreenDimensions</include>
+				<fadetime>400</fadetime>
 				<texture colordiffuse="$VAR[DiffuseColor]">views/white_20.png</texture>
 			</control>
 		</control>
@@ -188,28 +190,33 @@
 			<include>WindowFadeAnimation</include>
 			<control type="image">
 				<include>FullscreenDimensions</include>
+				<fadetime>400</fadetime>
 				<texture colordiffuse="$VAR[BackgroundColor]">dialogs/OptionsBackground.png</texture>
 			</control>
 		</control>
 	</include>
 	<!-- Menu fade background image -->
 	<include name="MenuFadeBackgroundImage">
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<fadetime>400</fadetime>
-			<texture fallback="empty" background="true" colordiffuse="$VAR[DiffuseColor]">$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
-		</control>
-		<control type="image">
+		<control type="group">
 			<include>WindowFadeAnimation</include>
-			<include>FullscreenDimensions</include>
-			<texture colordiffuse="$VAR[BackgroundColor]">views/overlay_20.png</texture>
-			<include>Opacity</include>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<fadetime>400</fadetime>
+				<texture background="true" colordiffuse="$VAR[DiffuseColor]">$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
+			</control>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<fadetime>400</fadetime>
+				<texture colordiffuse="$VAR[BackgroundColor]">views/overlay_20.png</texture>
+				<include>Opacity</include>
+			</control>
 		</control>
 	</include>
 	<!-- Options background image -->
 	<include name="OptionsBackgroundImage">
 		<control type="image">
 			<include>FullscreenDimensions</include>
+			<fadetime>400</fadetime>
 			<texture border="20">dialogs/OptionsBackground.png</texture>
 		</control>
 	</include>
@@ -312,108 +319,108 @@
 	</include>
 	<include name="Opacity">
 		<!-- Opacity -->
-		<animation effect="fade" start="100" end="80" condition="String.IsEmpty(Skin.String(Opacity))">Conditional</animation>
-		<animation effect="fade" start="100" end="0" condition="String.Contains(Skin.String(Opacity),$NUMBER[0])">Conditional</animation>
-		<animation effect="fade" start="100" end="1" condition="String.Contains(Skin.String(Opacity),$NUMBER[1])">Conditional</animation>
-		<animation effect="fade" start="100" end="2" condition="String.Contains(Skin.String(Opacity),$NUMBER[2])">Conditional</animation>
-		<animation effect="fade" start="100" end="3" condition="String.Contains(Skin.String(Opacity),$NUMBER[3])">Conditional</animation>
-		<animation effect="fade" start="100" end="4" condition="String.Contains(Skin.String(Opacity),$NUMBER[4])">Conditional</animation>
-		<animation effect="fade" start="100" end="5" condition="String.Contains(Skin.String(Opacity),$NUMBER[5])">Conditional</animation>
-		<animation effect="fade" start="100" end="6" condition="String.Contains(Skin.String(Opacity),$NUMBER[6])">Conditional</animation>
-		<animation effect="fade" start="100" end="7" condition="String.Contains(Skin.String(Opacity),$NUMBER[7])">Conditional</animation>
-		<animation effect="fade" start="100" end="8" condition="String.Contains(Skin.String(Opacity),$NUMBER[8])">Conditional</animation>
-		<animation effect="fade" start="100" end="9" condition="String.Contains(Skin.String(Opacity),$NUMBER[9])">Conditional</animation>
-		<animation effect="fade" start="100" end="10" condition="String.Contains(Skin.String(Opacity),$NUMBER[10])">Conditional</animation>
-		<animation effect="fade" start="100" end="11" condition="String.Contains(Skin.String(Opacity),$NUMBER[11])">Conditional</animation>
-		<animation effect="fade" start="100" end="12" condition="String.Contains(Skin.String(Opacity),$NUMBER[12])">Conditional</animation>
-		<animation effect="fade" start="100" end="13" condition="String.Contains(Skin.String(Opacity),$NUMBER[13])">Conditional</animation>
-		<animation effect="fade" start="100" end="14" condition="String.Contains(Skin.String(Opacity),$NUMBER[14])">Conditional</animation>
-		<animation effect="fade" start="100" end="15" condition="String.Contains(Skin.String(Opacity),$NUMBER[15])">Conditional</animation>
-		<animation effect="fade" start="100" end="16" condition="String.Contains(Skin.String(Opacity),$NUMBER[16])">Conditional</animation>
-		<animation effect="fade" start="100" end="17" condition="String.Contains(Skin.String(Opacity),$NUMBER[17])">Conditional</animation>
-		<animation effect="fade" start="100" end="18" condition="String.Contains(Skin.String(Opacity),$NUMBER[18])">Conditional</animation>
-		<animation effect="fade" start="100" end="19" condition="String.Contains(Skin.String(Opacity),$NUMBER[19])">Conditional</animation>
-		<animation effect="fade" start="100" end="20" condition="String.Contains(Skin.String(Opacity),$NUMBER[20])">Conditional</animation>
-		<animation effect="fade" start="100" end="21" condition="String.Contains(Skin.String(Opacity),$NUMBER[21])">Conditional</animation>
-		<animation effect="fade" start="100" end="22" condition="String.Contains(Skin.String(Opacity),$NUMBER[22])">Conditional</animation>
-		<animation effect="fade" start="100" end="23" condition="String.Contains(Skin.String(Opacity),$NUMBER[23])">Conditional</animation>
-		<animation effect="fade" start="100" end="24" condition="String.Contains(Skin.String(Opacity),$NUMBER[24])">Conditional</animation>
-		<animation effect="fade" start="100" end="25" condition="String.Contains(Skin.String(Opacity),$NUMBER[25])">Conditional</animation>
-		<animation effect="fade" start="100" end="26" condition="String.Contains(Skin.String(Opacity),$NUMBER[26])">Conditional</animation>
-		<animation effect="fade" start="100" end="27" condition="String.Contains(Skin.String(Opacity),$NUMBER[27])">Conditional</animation>
-		<animation effect="fade" start="100" end="28" condition="String.Contains(Skin.String(Opacity),$NUMBER[28])">Conditional</animation>
-		<animation effect="fade" start="100" end="29" condition="String.Contains(Skin.String(Opacity),$NUMBER[29])">Conditional</animation>
-		<animation effect="fade" start="100" end="30" condition="String.Contains(Skin.String(Opacity),$NUMBER[30])">Conditional</animation>
-		<animation effect="fade" start="100" end="31" condition="String.Contains(Skin.String(Opacity),$NUMBER[31])">Conditional</animation>
-		<animation effect="fade" start="100" end="32" condition="String.Contains(Skin.String(Opacity),$NUMBER[32])">Conditional</animation>
-		<animation effect="fade" start="100" end="33" condition="String.Contains(Skin.String(Opacity),$NUMBER[33])">Conditional</animation>
-		<animation effect="fade" start="100" end="34" condition="String.Contains(Skin.String(Opacity),$NUMBER[34])">Conditional</animation>
-		<animation effect="fade" start="100" end="35" condition="String.Contains(Skin.String(Opacity),$NUMBER[35])">Conditional</animation>
-		<animation effect="fade" start="100" end="36" condition="String.Contains(Skin.String(Opacity),$NUMBER[36])">Conditional</animation>
-		<animation effect="fade" start="100" end="37" condition="String.Contains(Skin.String(Opacity),$NUMBER[37])">Conditional</animation>
-		<animation effect="fade" start="100" end="38" condition="String.Contains(Skin.String(Opacity),$NUMBER[38])">Conditional</animation>
-		<animation effect="fade" start="100" end="39" condition="String.Contains(Skin.String(Opacity),$NUMBER[39])">Conditional</animation>
-		<animation effect="fade" start="100" end="40" condition="String.Contains(Skin.String(Opacity),$NUMBER[40])">Conditional</animation>
-		<animation effect="fade" start="100" end="41" condition="String.Contains(Skin.String(Opacity),$NUMBER[41])">Conditional</animation>
-		<animation effect="fade" start="100" end="42" condition="String.Contains(Skin.String(Opacity),$NUMBER[42])">Conditional</animation>
-		<animation effect="fade" start="100" end="43" condition="String.Contains(Skin.String(Opacity),$NUMBER[43])">Conditional</animation>
-		<animation effect="fade" start="100" end="44" condition="String.Contains(Skin.String(Opacity),$NUMBER[44])">Conditional</animation>
-		<animation effect="fade" start="100" end="45" condition="String.Contains(Skin.String(Opacity),$NUMBER[45])">Conditional</animation>
-		<animation effect="fade" start="100" end="46" condition="String.Contains(Skin.String(Opacity),$NUMBER[46])">Conditional</animation>
-		<animation effect="fade" start="100" end="47" condition="String.Contains(Skin.String(Opacity),$NUMBER[47])">Conditional</animation>
-		<animation effect="fade" start="100" end="48" condition="String.Contains(Skin.String(Opacity),$NUMBER[48])">Conditional</animation>
-		<animation effect="fade" start="100" end="49" condition="String.Contains(Skin.String(Opacity),$NUMBER[49])">Conditional</animation>
-		<animation effect="fade" start="100" end="50" condition="String.Contains(Skin.String(Opacity),$NUMBER[50])">Conditional</animation>
-		<animation effect="fade" start="100" end="51" condition="String.Contains(Skin.String(Opacity),$NUMBER[51])">Conditional</animation>
-		<animation effect="fade" start="100" end="52" condition="String.Contains(Skin.String(Opacity),$NUMBER[52])">Conditional</animation>
-		<animation effect="fade" start="100" end="53" condition="String.Contains(Skin.String(Opacity),$NUMBER[53])">Conditional</animation>
-		<animation effect="fade" start="100" end="54" condition="String.Contains(Skin.String(Opacity),$NUMBER[54])">Conditional</animation>
-		<animation effect="fade" start="100" end="55" condition="String.Contains(Skin.String(Opacity),$NUMBER[55])">Conditional</animation>
-		<animation effect="fade" start="100" end="56" condition="String.Contains(Skin.String(Opacity),$NUMBER[56])">Conditional</animation>
-		<animation effect="fade" start="100" end="57" condition="String.Contains(Skin.String(Opacity),$NUMBER[57])">Conditional</animation>
-		<animation effect="fade" start="100" end="58" condition="String.Contains(Skin.String(Opacity),$NUMBER[58])">Conditional</animation>
-		<animation effect="fade" start="100" end="59" condition="String.Contains(Skin.String(Opacity),$NUMBER[59])">Conditional</animation>
-		<animation effect="fade" start="100" end="60" condition="String.Contains(Skin.String(Opacity),$NUMBER[60])">Conditional</animation>
-		<animation effect="fade" start="100" end="61" condition="String.Contains(Skin.String(Opacity),$NUMBER[61])">Conditional</animation>
-		<animation effect="fade" start="100" end="62" condition="String.Contains(Skin.String(Opacity),$NUMBER[62])">Conditional</animation>
-		<animation effect="fade" start="100" end="63" condition="String.Contains(Skin.String(Opacity),$NUMBER[63])">Conditional</animation>
-		<animation effect="fade" start="100" end="64" condition="String.Contains(Skin.String(Opacity),$NUMBER[64])">Conditional</animation>
-		<animation effect="fade" start="100" end="65" condition="String.Contains(Skin.String(Opacity),$NUMBER[65])">Conditional</animation>
-		<animation effect="fade" start="100" end="66" condition="String.Contains(Skin.String(Opacity),$NUMBER[66])">Conditional</animation>
-		<animation effect="fade" start="100" end="67" condition="String.Contains(Skin.String(Opacity),$NUMBER[67])">Conditional</animation>
-		<animation effect="fade" start="100" end="68" condition="String.Contains(Skin.String(Opacity),$NUMBER[68])">Conditional</animation>
-		<animation effect="fade" start="100" end="69" condition="String.Contains(Skin.String(Opacity),$NUMBER[69])">Conditional</animation>
-		<animation effect="fade" start="100" end="70" condition="String.Contains(Skin.String(Opacity),$NUMBER[70])">Conditional</animation>
-		<animation effect="fade" start="100" end="71" condition="String.Contains(Skin.String(Opacity),$NUMBER[71])">Conditional</animation>
-		<animation effect="fade" start="100" end="72" condition="String.Contains(Skin.String(Opacity),$NUMBER[72])">Conditional</animation>
-		<animation effect="fade" start="100" end="73" condition="String.Contains(Skin.String(Opacity),$NUMBER[73])">Conditional</animation>
-		<animation effect="fade" start="100" end="74" condition="String.Contains(Skin.String(Opacity),$NUMBER[74])">Conditional</animation>
-		<animation effect="fade" start="100" end="75" condition="String.Contains(Skin.String(Opacity),$NUMBER[75])">Conditional</animation>
-		<animation effect="fade" start="100" end="76" condition="String.Contains(Skin.String(Opacity),$NUMBER[76])">Conditional</animation>
-		<animation effect="fade" start="100" end="77" condition="String.Contains(Skin.String(Opacity),$NUMBER[77])">Conditional</animation>
-		<animation effect="fade" start="100" end="78" condition="String.Contains(Skin.String(Opacity),$NUMBER[78])">Conditional</animation>
-		<animation effect="fade" start="100" end="79" condition="String.Contains(Skin.String(Opacity),$NUMBER[79])">Conditional</animation>
-		<animation effect="fade" start="100" end="80" condition="String.Contains(Skin.String(Opacity),$NUMBER[80])">Conditional</animation>
-		<animation effect="fade" start="100" end="81" condition="String.Contains(Skin.String(Opacity),$NUMBER[81])">Conditional</animation>
-		<animation effect="fade" start="100" end="82" condition="String.Contains(Skin.String(Opacity),$NUMBER[82])">Conditional</animation>
-		<animation effect="fade" start="100" end="83" condition="String.Contains(Skin.String(Opacity),$NUMBER[83])">Conditional</animation>
-		<animation effect="fade" start="100" end="84" condition="String.Contains(Skin.String(Opacity),$NUMBER[84])">Conditional</animation>
-		<animation effect="fade" start="100" end="85" condition="String.Contains(Skin.String(Opacity),$NUMBER[85])">Conditional</animation>
-		<animation effect="fade" start="100" end="86" condition="String.Contains(Skin.String(Opacity),$NUMBER[86])">Conditional</animation>
-		<animation effect="fade" start="100" end="87" condition="String.Contains(Skin.String(Opacity),$NUMBER[87])">Conditional</animation>
-		<animation effect="fade" start="100" end="88" condition="String.Contains(Skin.String(Opacity),$NUMBER[88])">Conditional</animation>
-		<animation effect="fade" start="100" end="89" condition="String.Contains(Skin.String(Opacity),$NUMBER[89])">Conditional</animation>
-		<animation effect="fade" start="100" end="90" condition="String.Contains(Skin.String(Opacity),$NUMBER[90])">Conditional</animation>
-		<animation effect="fade" start="100" end="91" condition="String.Contains(Skin.String(Opacity),$NUMBER[91])">Conditional</animation>
-		<animation effect="fade" start="100" end="92" condition="String.Contains(Skin.String(Opacity),$NUMBER[92])">Conditional</animation>
-		<animation effect="fade" start="100" end="93" condition="String.Contains(Skin.String(Opacity),$NUMBER[93])">Conditional</animation>
-		<animation effect="fade" start="100" end="94" condition="String.Contains(Skin.String(Opacity),$NUMBER[94])">Conditional</animation>
-		<animation effect="fade" start="100" end="95" condition="String.Contains(Skin.String(Opacity),$NUMBER[95])">Conditional</animation>
-		<animation effect="fade" start="100" end="96" condition="String.Contains(Skin.String(Opacity),$NUMBER[96])">Conditional</animation>
-		<animation effect="fade" start="100" end="97" condition="String.Contains(Skin.String(Opacity),$NUMBER[97])">Conditional</animation>
-		<animation effect="fade" start="100" end="98" condition="String.Contains(Skin.String(Opacity),$NUMBER[98])">Conditional</animation>
-		<animation effect="fade" start="100" end="99" condition="String.Contains(Skin.String(Opacity),$NUMBER[99])">Conditional</animation>
-		<animation effect="fade" start="100" end="100" condition="String.Contains(Skin.String(Opacity),$NUMBER[100])">Conditional</animation>
+		<animation effect="fade" start="0" end="80" condition="String.IsEmpty(Skin.String(Opacity))">Conditional</animation>
+		<animation effect="fade" start="0" end="0" condition="String.Contains(Skin.String(Opacity),$NUMBER[0])">Conditional</animation>
+		<animation effect="fade" start="0" end="1" condition="String.Contains(Skin.String(Opacity),$NUMBER[1])">Conditional</animation>
+		<animation effect="fade" start="0" end="2" condition="String.Contains(Skin.String(Opacity),$NUMBER[2])">Conditional</animation>
+		<animation effect="fade" start="0" end="3" condition="String.Contains(Skin.String(Opacity),$NUMBER[3])">Conditional</animation>
+		<animation effect="fade" start="0" end="4" condition="String.Contains(Skin.String(Opacity),$NUMBER[4])">Conditional</animation>
+		<animation effect="fade" start="0" end="5" condition="String.Contains(Skin.String(Opacity),$NUMBER[5])">Conditional</animation>
+		<animation effect="fade" start="0" end="6" condition="String.Contains(Skin.String(Opacity),$NUMBER[6])">Conditional</animation>
+		<animation effect="fade" start="0" end="7" condition="String.Contains(Skin.String(Opacity),$NUMBER[7])">Conditional</animation>
+		<animation effect="fade" start="0" end="8" condition="String.Contains(Skin.String(Opacity),$NUMBER[8])">Conditional</animation>
+		<animation effect="fade" start="0" end="9" condition="String.Contains(Skin.String(Opacity),$NUMBER[9])">Conditional</animation>
+		<animation effect="fade" start="0" end="10" condition="String.Contains(Skin.String(Opacity),$NUMBER[10])">Conditional</animation>
+		<animation effect="fade" start="0" end="11" condition="String.Contains(Skin.String(Opacity),$NUMBER[11])">Conditional</animation>
+		<animation effect="fade" start="0" end="12" condition="String.Contains(Skin.String(Opacity),$NUMBER[12])">Conditional</animation>
+		<animation effect="fade" start="0" end="13" condition="String.Contains(Skin.String(Opacity),$NUMBER[13])">Conditional</animation>
+		<animation effect="fade" start="0" end="14" condition="String.Contains(Skin.String(Opacity),$NUMBER[14])">Conditional</animation>
+		<animation effect="fade" start="0" end="15" condition="String.Contains(Skin.String(Opacity),$NUMBER[15])">Conditional</animation>
+		<animation effect="fade" start="0" end="16" condition="String.Contains(Skin.String(Opacity),$NUMBER[16])">Conditional</animation>
+		<animation effect="fade" start="0" end="17" condition="String.Contains(Skin.String(Opacity),$NUMBER[17])">Conditional</animation>
+		<animation effect="fade" start="0" end="18" condition="String.Contains(Skin.String(Opacity),$NUMBER[18])">Conditional</animation>
+		<animation effect="fade" start="0" end="19" condition="String.Contains(Skin.String(Opacity),$NUMBER[19])">Conditional</animation>
+		<animation effect="fade" start="0" end="20" condition="String.Contains(Skin.String(Opacity),$NUMBER[20])">Conditional</animation>
+		<animation effect="fade" start="0" end="21" condition="String.Contains(Skin.String(Opacity),$NUMBER[21])">Conditional</animation>
+		<animation effect="fade" start="0" end="22" condition="String.Contains(Skin.String(Opacity),$NUMBER[22])">Conditional</animation>
+		<animation effect="fade" start="0" end="23" condition="String.Contains(Skin.String(Opacity),$NUMBER[23])">Conditional</animation>
+		<animation effect="fade" start="0" end="24" condition="String.Contains(Skin.String(Opacity),$NUMBER[24])">Conditional</animation>
+		<animation effect="fade" start="0" end="25" condition="String.Contains(Skin.String(Opacity),$NUMBER[25])">Conditional</animation>
+		<animation effect="fade" start="0" end="26" condition="String.Contains(Skin.String(Opacity),$NUMBER[26])">Conditional</animation>
+		<animation effect="fade" start="0" end="27" condition="String.Contains(Skin.String(Opacity),$NUMBER[27])">Conditional</animation>
+		<animation effect="fade" start="0" end="28" condition="String.Contains(Skin.String(Opacity),$NUMBER[28])">Conditional</animation>
+		<animation effect="fade" start="0" end="29" condition="String.Contains(Skin.String(Opacity),$NUMBER[29])">Conditional</animation>
+		<animation effect="fade" start="0" end="30" condition="String.Contains(Skin.String(Opacity),$NUMBER[30])">Conditional</animation>
+		<animation effect="fade" start="0" end="31" condition="String.Contains(Skin.String(Opacity),$NUMBER[31])">Conditional</animation>
+		<animation effect="fade" start="0" end="32" condition="String.Contains(Skin.String(Opacity),$NUMBER[32])">Conditional</animation>
+		<animation effect="fade" start="0" end="33" condition="String.Contains(Skin.String(Opacity),$NUMBER[33])">Conditional</animation>
+		<animation effect="fade" start="0" end="34" condition="String.Contains(Skin.String(Opacity),$NUMBER[34])">Conditional</animation>
+		<animation effect="fade" start="0" end="35" condition="String.Contains(Skin.String(Opacity),$NUMBER[35])">Conditional</animation>
+		<animation effect="fade" start="0" end="36" condition="String.Contains(Skin.String(Opacity),$NUMBER[36])">Conditional</animation>
+		<animation effect="fade" start="0" end="37" condition="String.Contains(Skin.String(Opacity),$NUMBER[37])">Conditional</animation>
+		<animation effect="fade" start="0" end="38" condition="String.Contains(Skin.String(Opacity),$NUMBER[38])">Conditional</animation>
+		<animation effect="fade" start="0" end="39" condition="String.Contains(Skin.String(Opacity),$NUMBER[39])">Conditional</animation>
+		<animation effect="fade" start="0" end="40" condition="String.Contains(Skin.String(Opacity),$NUMBER[40])">Conditional</animation>
+		<animation effect="fade" start="0" end="41" condition="String.Contains(Skin.String(Opacity),$NUMBER[41])">Conditional</animation>
+		<animation effect="fade" start="0" end="42" condition="String.Contains(Skin.String(Opacity),$NUMBER[42])">Conditional</animation>
+		<animation effect="fade" start="0" end="43" condition="String.Contains(Skin.String(Opacity),$NUMBER[43])">Conditional</animation>
+		<animation effect="fade" start="0" end="44" condition="String.Contains(Skin.String(Opacity),$NUMBER[44])">Conditional</animation>
+		<animation effect="fade" start="0" end="45" condition="String.Contains(Skin.String(Opacity),$NUMBER[45])">Conditional</animation>
+		<animation effect="fade" start="0" end="46" condition="String.Contains(Skin.String(Opacity),$NUMBER[46])">Conditional</animation>
+		<animation effect="fade" start="0" end="47" condition="String.Contains(Skin.String(Opacity),$NUMBER[47])">Conditional</animation>
+		<animation effect="fade" start="0" end="48" condition="String.Contains(Skin.String(Opacity),$NUMBER[48])">Conditional</animation>
+		<animation effect="fade" start="0" end="49" condition="String.Contains(Skin.String(Opacity),$NUMBER[49])">Conditional</animation>
+		<animation effect="fade" start="0" end="50" condition="String.Contains(Skin.String(Opacity),$NUMBER[50])">Conditional</animation>
+		<animation effect="fade" start="0" end="51" condition="String.Contains(Skin.String(Opacity),$NUMBER[51])">Conditional</animation>
+		<animation effect="fade" start="0" end="52" condition="String.Contains(Skin.String(Opacity),$NUMBER[52])">Conditional</animation>
+		<animation effect="fade" start="0" end="53" condition="String.Contains(Skin.String(Opacity),$NUMBER[53])">Conditional</animation>
+		<animation effect="fade" start="0" end="54" condition="String.Contains(Skin.String(Opacity),$NUMBER[54])">Conditional</animation>
+		<animation effect="fade" start="0" end="55" condition="String.Contains(Skin.String(Opacity),$NUMBER[55])">Conditional</animation>
+		<animation effect="fade" start="0" end="56" condition="String.Contains(Skin.String(Opacity),$NUMBER[56])">Conditional</animation>
+		<animation effect="fade" start="0" end="57" condition="String.Contains(Skin.String(Opacity),$NUMBER[57])">Conditional</animation>
+		<animation effect="fade" start="0" end="58" condition="String.Contains(Skin.String(Opacity),$NUMBER[58])">Conditional</animation>
+		<animation effect="fade" start="0" end="59" condition="String.Contains(Skin.String(Opacity),$NUMBER[59])">Conditional</animation>
+		<animation effect="fade" start="0" end="60" condition="String.Contains(Skin.String(Opacity),$NUMBER[60])">Conditional</animation>
+		<animation effect="fade" start="0" end="61" condition="String.Contains(Skin.String(Opacity),$NUMBER[61])">Conditional</animation>
+		<animation effect="fade" start="0" end="62" condition="String.Contains(Skin.String(Opacity),$NUMBER[62])">Conditional</animation>
+		<animation effect="fade" start="0" end="63" condition="String.Contains(Skin.String(Opacity),$NUMBER[63])">Conditional</animation>
+		<animation effect="fade" start="0" end="64" condition="String.Contains(Skin.String(Opacity),$NUMBER[64])">Conditional</animation>
+		<animation effect="fade" start="0" end="65" condition="String.Contains(Skin.String(Opacity),$NUMBER[65])">Conditional</animation>
+		<animation effect="fade" start="0" end="66" condition="String.Contains(Skin.String(Opacity),$NUMBER[66])">Conditional</animation>
+		<animation effect="fade" start="0" end="67" condition="String.Contains(Skin.String(Opacity),$NUMBER[67])">Conditional</animation>
+		<animation effect="fade" start="0" end="68" condition="String.Contains(Skin.String(Opacity),$NUMBER[68])">Conditional</animation>
+		<animation effect="fade" start="0" end="69" condition="String.Contains(Skin.String(Opacity),$NUMBER[69])">Conditional</animation>
+		<animation effect="fade" start="0" end="70" condition="String.Contains(Skin.String(Opacity),$NUMBER[70])">Conditional</animation>
+		<animation effect="fade" start="0" end="71" condition="String.Contains(Skin.String(Opacity),$NUMBER[71])">Conditional</animation>
+		<animation effect="fade" start="0" end="72" condition="String.Contains(Skin.String(Opacity),$NUMBER[72])">Conditional</animation>
+		<animation effect="fade" start="0" end="73" condition="String.Contains(Skin.String(Opacity),$NUMBER[73])">Conditional</animation>
+		<animation effect="fade" start="0" end="74" condition="String.Contains(Skin.String(Opacity),$NUMBER[74])">Conditional</animation>
+		<animation effect="fade" start="0" end="75" condition="String.Contains(Skin.String(Opacity),$NUMBER[75])">Conditional</animation>
+		<animation effect="fade" start="0" end="76" condition="String.Contains(Skin.String(Opacity),$NUMBER[76])">Conditional</animation>
+		<animation effect="fade" start="0" end="77" condition="String.Contains(Skin.String(Opacity),$NUMBER[77])">Conditional</animation>
+		<animation effect="fade" start="0" end="78" condition="String.Contains(Skin.String(Opacity),$NUMBER[78])">Conditional</animation>
+		<animation effect="fade" start="0" end="79" condition="String.Contains(Skin.String(Opacity),$NUMBER[79])">Conditional</animation>
+		<animation effect="fade" start="0" end="80" condition="String.Contains(Skin.String(Opacity),$NUMBER[80])">Conditional</animation>
+		<animation effect="fade" start="0" end="81" condition="String.Contains(Skin.String(Opacity),$NUMBER[81])">Conditional</animation>
+		<animation effect="fade" start="0" end="82" condition="String.Contains(Skin.String(Opacity),$NUMBER[82])">Conditional</animation>
+		<animation effect="fade" start="0" end="83" condition="String.Contains(Skin.String(Opacity),$NUMBER[83])">Conditional</animation>
+		<animation effect="fade" start="0" end="84" condition="String.Contains(Skin.String(Opacity),$NUMBER[84])">Conditional</animation>
+		<animation effect="fade" start="0" end="85" condition="String.Contains(Skin.String(Opacity),$NUMBER[85])">Conditional</animation>
+		<animation effect="fade" start="0" end="86" condition="String.Contains(Skin.String(Opacity),$NUMBER[86])">Conditional</animation>
+		<animation effect="fade" start="0" end="87" condition="String.Contains(Skin.String(Opacity),$NUMBER[87])">Conditional</animation>
+		<animation effect="fade" start="0" end="88" condition="String.Contains(Skin.String(Opacity),$NUMBER[88])">Conditional</animation>
+		<animation effect="fade" start="0" end="89" condition="String.Contains(Skin.String(Opacity),$NUMBER[89])">Conditional</animation>
+		<animation effect="fade" start="0" end="90" condition="String.Contains(Skin.String(Opacity),$NUMBER[90])">Conditional</animation>
+		<animation effect="fade" start="0" end="91" condition="String.Contains(Skin.String(Opacity),$NUMBER[91])">Conditional</animation>
+		<animation effect="fade" start="0" end="92" condition="String.Contains(Skin.String(Opacity),$NUMBER[92])">Conditional</animation>
+		<animation effect="fade" start="0" end="93" condition="String.Contains(Skin.String(Opacity),$NUMBER[93])">Conditional</animation>
+		<animation effect="fade" start="0" end="94" condition="String.Contains(Skin.String(Opacity),$NUMBER[94])">Conditional</animation>
+		<animation effect="fade" start="0" end="95" condition="String.Contains(Skin.String(Opacity),$NUMBER[95])">Conditional</animation>
+		<animation effect="fade" start="0" end="96" condition="String.Contains(Skin.String(Opacity),$NUMBER[96])">Conditional</animation>
+		<animation effect="fade" start="0" end="97" condition="String.Contains(Skin.String(Opacity),$NUMBER[97])">Conditional</animation>
+		<animation effect="fade" start="0" end="98" condition="String.Contains(Skin.String(Opacity),$NUMBER[98])">Conditional</animation>
+		<animation effect="fade" start="0" end="99" condition="String.Contains(Skin.String(Opacity),$NUMBER[99])">Conditional</animation>
+		<animation effect="fade" start="0" end="100" condition="String.Contains(Skin.String(Opacity),$NUMBER[100])">Conditional</animation>
 	</include>
 	<!-- Hidden control -->
 	<include name="HiddenControl">

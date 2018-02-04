@@ -930,7 +930,7 @@
 					<width>640</width>
 					<height>248</height>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<texture fallback="empty">$VAR[NextAiredLogo]</texture>
+					<texture>$VAR[NextAiredLogo]</texture>
 					<visible>Skin.HasSetting(LogosInfo) | Skin.HasSetting(LogosBoth)</visible>
 				</control>
 				<!-- Details Line 1 -->

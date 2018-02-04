@@ -9,6 +9,7 @@
 	<controls>
 		<!-- Fanart -->
 		<control type="multiimage" id="7975">
+			<include>WindowFadeAnimation</include>
 			<include>FullscreenDimensions</include>
 			<timeperimage>10000</timeperimage>
 			<fadetime>320</fadetime>
