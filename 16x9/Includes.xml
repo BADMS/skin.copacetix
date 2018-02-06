@@ -171,7 +171,7 @@
 	<include name="Fanart">
 		<!-- global background -->
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" condition="!Control.IsVisible(50) | String.Contains(ListItem.Icon,Default) | String.IsEmpty(Control.GetLabel(7975))">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" condition="String.Contains(ListItem.Icon,Default) | String.IsEmpty(Control.GetLabel(7975))">Conditional</animation>
 			<control type="image" id="7975">
 				<include>FullscreenDimensions</include>
 				<fadetime>400</fadetime>

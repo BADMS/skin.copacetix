@@ -12,7 +12,7 @@
 			<description>trigger</description>
 			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
 			<onfocus condition="System.HasAddon(script.colorbox)">RunScript(script.colorbox,daemon=True)</onfocus>
-			<onfocus condition="System.HasAddon(script.colorbox)">AlarmClock(nms1,SetProperty(NINE_manual_set,"var=main,set=main:|var=comp,set=main:hls*0.33;0;0@hsv*0;-0.1;0.3|var=quality,set=8",home),00:05,true)</onfocus>
+			<onfocus condition="System.HasAddon(script.colorbox)">AlarmClock(nms1,SetProperty(NINE_manual_set,"var=main,set=main:|var=comp,set=main:hls*0.33;0;0@hsv*0;-0.1;0.3|var=blursize,set=2|var=quality,set=8",home),00:05,true)</onfocus>
 			<texturenofocus></texturenofocus>
 			<texturefocus></texturefocus>
 			<visible>!Skin.HasSetting(Use_Startup_Playlist)</visible>
@@ -22,7 +22,7 @@
 			<onfocus>XBMC.PlayMedia($INFO[Skin.String(Startup_Playlist_Path)])</onfocus>
 			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
 			<onfocus condition="System.HasAddon(script.colorbox)">RunScript(script.colorbox,daemon=True)</onfocus>
-			<onfocus condition="System.HasAddon(script.colorbox)">AlarmClock(nms1,SetProperty(NINE_manual_set,"var=main,set=main:|var=comp,set=main:hls*0.33;0;0@hsv*0;-0.1;0.3|var=quality,set=8",home),00:05,true)</onfocus>
+			<onfocus condition="System.HasAddon(script.colorbox)">AlarmClock(nms1,SetProperty(NINE_manual_set,"var=main,set=main:|var=comp,set=main:hls*0.33;0;0@hsv*0;-0.1;0.3|var=blursize,set=2|var=quality,set=8",home),00:05,true)</onfocus>
 			<texturenofocus></texturenofocus>
 			<texturefocus></texturefocus>
 			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
