@@ -43,6 +43,11 @@
 			<effect type="fade" start="100" end="0" time="200" tween="cubic" easing="out"/>
 		</animation>
 	</include>
+	<include name="OppOtherInfoHideAnimation">
+		<animation type="Conditional" condition="Control.HasFocus(9000) | Control.HasFocus(9001) | Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsVisible(addoninformation) | Window.IsVisible(contextmenu)" reversible="true">
+			<effect type="fade" start="0" end="100" time="200" tween="cubic" easing="out"/>
+		</animation>
+	</include>
 	<include name="MediaInfoHideAnimation">
 		<animation type="Conditional" condition="Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsVisible(addoninformation)" reversible="true">
 			<effect type="fade" start="100" end="0" time="200" tween="cubic" easing="out"/>

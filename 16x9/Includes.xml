@@ -30,7 +30,6 @@
 			<visible>Control.HasFocus(9000) | Control.HasFocus(9001) | Control.HasFocus(9901) | Control.HasFocus(608)</visible>
 			<include>WindowFadeAnimation</include>
 			<!-- Clock -->
-			<include>Clock</include>
 			<!-- Main list -->
 			<control type="fixedlist" id="9000">
 				<left>50</left>
@@ -449,7 +448,7 @@
 		<focusedcolor>$VAR[DiffuseColor]</focusedcolor>
 		<invalidcolor>$VAR[DisabledColor]</invalidcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-		<texturefocus colordiffuse="$VAR[TextColor]">views/white_10.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[TextColor]">views/white_20.png</texturefocus>
 		<texturenofocus colordiffuse="$VAR[DisabledColor]">views/white_10.png</texturenofocus>
 	</include>
 	<!-- Conq -->

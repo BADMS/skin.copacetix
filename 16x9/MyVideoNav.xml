@@ -696,5 +696,6 @@
 			</content>
 		</control>
 		<include>GlobalMenu</include>
+			<include>Clock</include>
 	</controls>
 </window>

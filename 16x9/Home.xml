@@ -20,5 +20,6 @@
 		</control>
 		<!-- Main controls -->
 		<include>GlobalMenu</include>
+		<include>Clock</include>
 	</controls>
 </window>
