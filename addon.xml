@@ -10,16 +10,16 @@
 	</requires>
 	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
-		<res width="1920" height="1200" aspect="16:10" default="false" folder="16x9" />
-		<res width="1920" height="1280" aspect="3:2" default="false" folder="16x9" />
-		<res width="1920" height="1440" aspect="4:3" default="false" folder="16x9" />
-		<res width="2040" height="1080" aspect="17:9" default="false" folder="16x9" />
-		<res width="2560" height="1080" aspect="21:9" default="false" folder="16x9" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en"></summary>
 		<disclaimer lang="en">Mouse and Touch device not supported</disclaimer>
 		<description lang="en"></description>
+		<source>https://github.com/BADMS/skin.copacetix</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
 	</extension>
 </addon>
