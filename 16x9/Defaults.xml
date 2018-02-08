@@ -28,10 +28,10 @@
 		<label></label>
 		<textoffsetx>10</textoffsetx>
 		<textcolor>$VAR[TextColor]</textcolor>
-		<focusedcolor>$VAR[UnFocusedColor]</focusedcolor>
+		<focusedcolor>$VAR[TextColor]</focusedcolor>
 		<invalidcolor>$VAR[DisabledColor]</invalidcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-		<texturefocus colordiffuse="$VAR[TextColor]">views/white_50.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[UnFocusedColor]">views/white_50.png</texturefocus>
 		<texturenofocus colordiffuse="$VAR[UnFocusedColor]">views/white_10.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</default>
@@ -43,9 +43,9 @@
 		<textoffsetx>10</textoffsetx>
 		<font>Light36</font>
 		<textcolor>$VAR[TextColor]</textcolor>
-		<focusedcolor>$VAR[UnFocusedColor]</focusedcolor>
+		<focusedcolor>$VAR[TextColor]</focusedcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-		<texturefocus colordiffuse="$VAR[TextColor]">views/white_50.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[UnFocusedColor]">views/white_50.png</texturefocus>
 		<texturenofocus colordiffuse="$VAR[UnFocusedColor]">views/white_10.png</texturenofocus>
 		<alttexturefocus colordiffuse="$VAR[UnFocusedColor]">views/white_50.png</alttexturefocus>
 		<alttexturenofocus colordiffuse="$VAR[TextColor]">views/white_10.png</alttexturenofocus>
@@ -59,11 +59,11 @@
 		<label></label>
 		<textoffsetx>10</textoffsetx>
 		<textcolor>$VAR[TextColor]</textcolor>
-		<focusedcolor>$VAR[UnFocusedColor]</focusedcolor>
+		<focusedcolor>$VAR[TextColor]</focusedcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 		<radiowidth />
 		<radioheight />
-		<texturefocus colordiffuse="$VAR[TextColor]">views/white_50.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[UnFocusedColor]">views/white_50.png</texturefocus>
 		<texturenofocus colordiffuse="$VAR[UnFocusedColor]">views/white_10.png</texturenofocus>
 		<textureradioonfocus/>
 		<textureradioofffocus/>
@@ -81,11 +81,11 @@
 		<font>Light36</font>
 		<textoffsetx>10</textoffsetx>
 		<textcolor>$VAR[TextColor]</textcolor>
-		<focusedcolor>$VAR[UnFocusedColor]</focusedcolor>
+		<focusedcolor>$VAR[TextColor]</focusedcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 		<spinwidth>55</spinwidth>
 		<spinheight>75</spinheight>
-		<texturefocus colordiffuse="$VAR[TextColor]">views/white_50.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[UnFocusedColor]">views/white_50.png</texturefocus>
 		<texturenofocus colordiffuse="$VAR[UnFocusedColor]">views/white_10.png</texturenofocus>
 		<textureup colordiffuse="$VAR[TextColor]">dialogs/spin_up.png</textureup>
 		<texturedown colordiffuse="$VAR[TextColor]">dialogs/spin_down.png</texturedown>
@@ -106,7 +106,7 @@
 		<font>Light36</font>
 		<textoffsetx>10</textoffsetx>
 		<textcolor>$VAR[TextColor]</textcolor>
-		<focusedcolor>$VAR[UnFocusedColor]</focusedcolor>
+		<focusedcolor>$VAR[TextColor]</focusedcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 		<spinwidth>43</spinwidth>
 		<spinheight>60</spinheight>
@@ -123,9 +123,9 @@
 		<aligny>center</aligny>
 		<font>Light36</font>
 		<textcolor>$VAR[TextColor]</textcolor>
-		<focusedcolor>$VAR[UnFocusedColor]</focusedcolor>
+		<focusedcolor>$VAR[TextColor]</focusedcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-		<texturefocus colordiffuse="$VAR[TextColor]">views/white_50.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[UnFocusedColor]">views/white_50.png</texturefocus>
 		<texturenofocus colordiffuse="$VAR[UnFocusedColor]">views/white_10.png</texturenofocus>
 		<sliderwidth>200</sliderwidth>
 		<sliderheight>20</sliderheight>
@@ -161,10 +161,10 @@
 		<hinttext/>
 		<textoffsetx>10</textoffsetx>
 		<textcolor>$VAR[TextColor]</textcolor>
-		<focusedcolor>$VAR[UnFocusedColor]</focusedcolor>
+		<focusedcolor>$VAR[TextColor]</focusedcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 		<invalidcolor>$VAR[DisabledColor]</invalidcolor>
-		<texturefocus colordiffuse="$VAR[TextColor]">views/white_50.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[UnFocusedColor]">views/white_50.png</texturefocus>
 		<texturenofocus colordiffuse="$VAR[UnFocusedColor]">views/white_50.png</texturenofocus>
 		<pulseonselect>no</pulseonselect>
 	</default>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<!-- settingscategory -->
-	<backgroundcolor>$VAR[BackgroundColor]</backgroundcolor>
 	<onload condition="String.IsEmpty(Window(settings).Property(ChangeSettingsLevel))">SetFocus(3)</onload>
 	<onload condition="!String.IsEmpty(Window(settings).Property(ChangeSettingsLevel))">SetFocus(20)</onload>
 	<onload condition="Window.Previous(skinsettings)">Right</onload>
@@ -12,7 +11,6 @@
 		<control type="multiimage" id="7975">
 			<include>FullscreenDimensions</include>
 			<timeperimage>10000</timeperimage>
-			<fadetime>320</fadetime>
 			<randomize>true</randomize>
 			<colordiffuse>$VAR[FanartColor]</colordiffuse>
 			<imagepath background="true">$VAR[HomeBackgroundImage]</imagepath>
@@ -46,7 +44,7 @@
 		<!-- Dummy list -->
 		<control type="grouplist" id="9000">
 			<left>120</left>
-			<top>240</top>
+			<top>120</top>
 			<width>300</width>
 			<height>870</height>
 			<itemgap>34</itemgap>
@@ -55,7 +53,7 @@
 			<!-- Appearance -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>480</label>
 				<font>Font42</font>
 				
@@ -63,7 +61,7 @@
 			</control>
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>480</label>
 				<font>Font42</font>
 				
@@ -72,7 +70,7 @@
 			<!-- Videos -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>3</label>
 				<font>Font42</font>
 				
@@ -80,7 +78,7 @@
 			</control>
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>3</label>
 				<font>Font42</font>
 				
@@ -89,7 +87,7 @@
 			<!-- Music -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>2</label>
 				<font>Font42</font>
 				
@@ -97,7 +95,7 @@
 			</control>
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>2</label>
 				<font>Font42</font>
 				
@@ -106,7 +104,7 @@
 			<!-- Pictures -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>1</label>
 				<font>Font42</font>
 				
@@ -114,7 +112,7 @@
 			</control>
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>1</label>
 				<font>Font42</font>
 				
@@ -123,7 +121,7 @@
 			<!-- Weather -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>8</label>
 				<font>Font42</font>
 				
@@ -131,7 +129,7 @@
 			</control>
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>8</label>
 				<font>Font42</font>
 				
@@ -140,7 +138,7 @@
 			<!-- System -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>13000</label>
 				<font>Font42</font>
 				
@@ -148,7 +146,7 @@
 			</control>
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>13000</label>
 				<font>Font42</font>
 				
@@ -157,7 +155,7 @@
 			<!-- Service -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>14036</label>
 				<font>Font42</font>
 				
@@ -165,7 +163,7 @@
 			</control>
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>14036</label>
 				<font>Font42</font>
 				
@@ -174,7 +172,7 @@
 			<!-- PVR -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>31015</label>
 				<font>Font42</font>
 				
@@ -182,7 +180,7 @@
 			</control>
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>31015</label>
 				<font>Font42</font>
 				
@@ -191,7 +189,7 @@
 			<!-- System info -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>130</label>
 				<font>Font42</font>
 				
@@ -199,7 +197,7 @@
 			</control>
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>130</label>
 				<font>Font42</font>
 				
@@ -208,7 +206,7 @@
 			<!-- More -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>22082</label>
 				<font>Font42</font>
 				
@@ -217,7 +215,7 @@
 			<!-- More -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>22082</label>
 				<font>Font42</font>
 				
@@ -254,7 +252,7 @@
 			<!-- Addons -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>24001</label>
 				<font>Font33</font>
 				
@@ -262,7 +260,7 @@
 			<!-- Profiles -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>13200</label>
 				<font>Font33</font>
 				
@@ -270,7 +268,7 @@
 			<!-- File manager -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>7</label>
 				<font>Font33</font>
 				
@@ -278,7 +276,7 @@
 			<!-- Settings level -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>31016</label>
 				<font>Font33</font>
 				
@@ -317,7 +315,7 @@
 			<left>830</left>
 			<top>244</top>
 			<width>970</width>
-			<height>42</height>
+			
 			<font>Font33</font>
 			<label>10037</label>
 			<onleft>ReplaceWindow(settings)</onleft>
@@ -377,7 +375,7 @@
 		<!-- Default group button -->
 		<control type="button" id="10">
 			<width>970</width>
-			<height>42</height>
+			
 			<font>Font33</font>
 			<onclick>SetFocus(5)</onclick>
 			
@@ -388,7 +386,7 @@
 		<!-- Default button -->
 		<control type="button" id="7">
 			<width>970</width>
-			<height>42</height>
+			
 			<font>Font33</font>
 			<textwidth>900</textwidth>
 			
@@ -400,7 +398,7 @@
 		<!-- Default radiobutton -->
 		<control type="radiobutton" id="8">
 			<width>970</width>
-			<height>42</height>
+			
 			<font>Font33</font>
 			<textwidth>900</textwidth>
 			
@@ -411,7 +409,7 @@
 		<!-- Default spincontrolex -->
 		<control type="spincontrolex" id="9">
 			<width>970</width>
-			<height>42</height>
+			
 			<font>Font33</font>
 			<textwidth>900</textwidth>
 			
@@ -422,7 +420,7 @@
 		<!-- Default sliderex -->
 		<control type="sliderex" id="13">
 			<width>970</width>
-			<height>42</height>
+			
 			<font>Font33</font>
 			<textwidth>900</textwidth>
 			

@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- skinsettings -->
-	<backgroundcolor>$VAR[BackgroundColor]</backgroundcolor>
 	<defaultcontrol always="true">9</defaultcontrol>
 
 	<controls>
 
 
 		<!-- Fanart -->
-		<include>MenuFadeBackgroundImage</include>
-		<control type="group">
-			<include>OtherInfoHideAnimation</include>
-			<include>Fanart</include>
+		<control type="multiimage" id="7975">
+			<include>FullscreenDimensions</include>
+			<timeperimage>10000</timeperimage>
+			<randomize>true</randomize>
+			<colordiffuse>$VAR[FanartColor]</colordiffuse>
+			<imagepath background="true">$VAR[HomeBackgroundImage]</imagepath>
+			<animation effect="fade" start="100" end="80" condition="[Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
 		</control>
 
 		<!-- Curve -->
@@ -40,7 +42,7 @@
 		<!-- Dummy list -->
 		<control type="grouplist" id="9000">
 			<left>120</left>
-			<top>240</top>
+			<top>120</top>
 			<width>300</width>
 			<height>870</height>
 			<itemgap>34</itemgap>
@@ -49,7 +51,7 @@
 			<!-- Appearance -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>480</label>
 				<font>Font42</font>
 				
@@ -57,7 +59,7 @@
 			<!-- Videos -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>3</label>
 				<font>Font42</font>
 				
@@ -65,7 +67,7 @@
 			<!-- Music -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>2</label>
 				<font>Font42</font>
 				
@@ -73,7 +75,7 @@
 			<!-- Pictures -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>1</label>
 				<font>Font42</font>
 				
@@ -81,7 +83,7 @@
 			<!-- Weather -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>8</label>
 				<font>Font42</font>
 				
@@ -89,7 +91,7 @@
 			<!-- System -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>13000</label>
 				<font>Font42</font>
 				
@@ -97,7 +99,7 @@
 			<!-- Service -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>14036</label>
 				<font>Font42</font>
 				
@@ -105,7 +107,7 @@
 			<!-- PVR -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>31015</label>
 				<font>Font42</font>
 				
@@ -113,7 +115,7 @@
 			<!-- System info -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>130</label>
 				<font>Font42</font>
 				
@@ -121,7 +123,7 @@
 			<!-- More -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>22082</label>
 				<font>Font42</font>
 				
@@ -141,7 +143,7 @@
 			<!-- Skin -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>166</label>
 				<font>Font33</font>
 				
@@ -149,7 +151,7 @@
 			<!-- International -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>14090</label>
 				<font>Font33</font>
 				
@@ -157,7 +159,7 @@
 			<!-- File lists -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>14081</label>
 				<font>Font33</font>
 				
@@ -165,7 +167,7 @@
 			<!-- Screensaver -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>360</label>
 				<font>Font33</font>
 				
@@ -201,10 +203,10 @@
 			<!-- Skin -->
 			<control type="group">
 				<width>970</width>
-				<height>42</height>
+				
 				<control type="label">
 					<width>970</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>166</label>
 					
@@ -212,7 +214,7 @@
 				<control type="label">
 					<right>0</right>
 					<width>970</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>Conq</label>
 					<align>right</align>
@@ -222,10 +224,10 @@
 			<!-- Settings -->
 			<control type="group">
 				<width>970</width>
-				<height>42</height>
+				
 				<control type="label">
 					<width>970</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>- $LOCALIZE[21417]</label>
 					
@@ -234,10 +236,10 @@
 			<!-- Theme -->
 			<control type="group">
 				<width>970</width>
-				<height>42</height>
+				
 				<control type="label">
 					<width>970</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>- $LOCALIZE[15111]</label>
 					<textcolor>$VAR[DisabledColor]</textcolor>
@@ -245,7 +247,7 @@
 				<control type="label">
 					<right>75</right>
 					<width>900</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>15109</label>
 					<align>right</align>
@@ -269,10 +271,10 @@
 			<!-- Colours -->
 			<control type="group">
 				<width>970</width>
-				<height>42</height>
+				
 				<control type="label">
 					<width>970</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>- $LOCALIZE[14078]</label>
 					
@@ -280,7 +282,7 @@
 				<control type="label">
 					<right>75</right>
 					<width>900</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>15109</label>
 					<align>right</align>
@@ -304,10 +306,10 @@
 			<!-- Fonts -->
 			<control type="group">
 				<width>970</width>
-				<height>42</height>
+				
 				<control type="label">
 					<width>970</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>- $LOCALIZE[13303]</label>
 					
@@ -315,7 +317,7 @@
 				<control type="label">
 					<right>75</right>
 					<width>900</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>13278</label>
 					<align>right</align>
@@ -339,10 +341,10 @@
 			<!-- Zoom -->
 			<control type="group">
 				<width>970</width>
-				<height>42</height>
+				
 				<control type="label">
 					<width>970</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>- $LOCALIZE[20109]</label>
 					
@@ -350,7 +352,7 @@
 				<control type="label">
 					<right>75</right>
 					<width>900</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>0 %</label>
 					<align>right</align>
@@ -374,10 +376,10 @@
 			<!-- Start window -->
 			<control type="group">
 				<width>970</width>
-				<height>42</height>
+				
 				<control type="label">
 					<width>970</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>$LOCALIZE[512]</label>
 					
@@ -385,7 +387,7 @@
 				<control type="label">
 					<right>75</right>
 					<width>900</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>513</label>
 					<align>right</align>
@@ -409,10 +411,10 @@
 			<!-- Navigation sounds -->
 			<control type="group">
 				<width>970</width>
-				<height>42</height>
+				
 				<control type="label">
 					<width>970</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>$LOCALIZE[15108]</label>
 					
@@ -420,7 +422,7 @@
 				<control type="label">
 					<right>75</right>
 					<width>900</width>
-					<height>42</height>
+					
 					<font>Font33</font>
 					<label>15109</label>
 					<align>right</align>

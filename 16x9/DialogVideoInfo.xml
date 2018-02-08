@@ -341,7 +341,7 @@
 			</control>
 			<!-- Viewtype_522_RowLandscape -->
 			<control type="group">
-				<left>100</left>
+				<left>0</left>
 				<top>270</top>
 				<width>960</width>
 				<visible>String.Contains(Container.Viewmode,$LOCALIZE[31522])</visible>

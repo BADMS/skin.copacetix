@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- systeminfo -->
-	<backgroundcolor>$VAR[BackgroundColor]</backgroundcolor>
 	<defaultcontrol always="true">95</defaultcontrol>
 
 	<controls>
-
+		<!-- Fanart -->
+		<control type="multiimage" id="7975">
+			<include>FullscreenDimensions</include>
+			<timeperimage>10000</timeperimage>
+			<randomize>true</randomize>
+			<colordiffuse>$VAR[FanartColor]</colordiffuse>
+			<imagepath background="true">$VAR[HomeBackgroundImage]</imagepath>
+			<animation effect="fade" start="100" end="80" condition="[Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
+		</control>
 
 		<!-- Curve -->
 		<control type="image">
@@ -34,7 +41,7 @@
 		<!-- Dummy list -->
 		<control type="grouplist" id="9000">
 			<left>120</left>
-			<top>240</top>
+			<top>120</top>
 			<width>300</width>
 			<height>870</height>
 			<itemgap>34</itemgap>
@@ -43,7 +50,7 @@
 			<!-- Appearance -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>480</label>
 				<font>Font42</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
@@ -51,7 +58,7 @@
 			<!-- Videos -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>3</label>
 				<font>Font42</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
@@ -59,7 +66,7 @@
 			<!-- Music -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>2</label>
 				<font>Font42</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
@@ -67,7 +74,7 @@
 			<!-- Pictures -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>1</label>
 				<font>Font42</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
@@ -75,7 +82,7 @@
 			<!-- Weather -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>8</label>
 				<font>Font42</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
@@ -83,7 +90,7 @@
 			<!-- System -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>13000</label>
 				<font>Font42</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
@@ -91,7 +98,7 @@
 			<!-- Service -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>14036</label>
 				<font>Font42</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
@@ -99,7 +106,7 @@
 			<!-- PVR -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>31015</label>
 				<font>Font42</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
@@ -107,7 +114,7 @@
 			<!-- System info -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>130</label>
 				<font>Font42</font>
 				<textcolor>$VAR[FocusedColor]</textcolor>
@@ -115,7 +122,7 @@
 			<!-- More -->
 			<control type="button">
 				<width>300</width>
-				<height>42</height>
+				
 				<label>22082</label>
 				<font>Font42</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
@@ -139,7 +146,7 @@
 			<!-- Summary -->
 			<control type="button" id="95">
 				<width>970</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<label>20037</label>
 				<textcolor>$VAR[SystemInfoButton95]</textcolor>
@@ -152,7 +159,7 @@
 			<!-- Storage -->
 			<control type="togglebutton" id="94">
 				<width>970</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<label>13277</label>
 				<textcolor>$VAR[SystemInfoButton94]</textcolor>
@@ -164,7 +171,7 @@
 			<!-- Network -->
 			<control type="button" id="96">
 				<width>970</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<label>13279</label>
 				<textcolor>$VAR[SystemInfoButton96]</textcolor>
@@ -177,7 +184,7 @@
 			<!-- Video -->
 			<control type="button" id="97">
 				<width>970</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<label>13280</label>
 				<textcolor>$VAR[SystemInfoButton97]</textcolor>
@@ -190,7 +197,7 @@
 			<!-- Hardware -->
 			<control type="button" id="98">
 				<width>970</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<label>13281</label>
 				<textcolor>$VAR[SystemInfoButton98]</textcolor>
@@ -203,7 +210,7 @@
 			<!-- PVR -->
 			<control type="button" id="99">
 				<width>970</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<label>19191</label>
 				<textcolor>$VAR[SystemInfoButton99]</textcolor>
@@ -243,7 +250,7 @@
 
 			<control type="button" id="102">
 				<width>900</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
 				<label>$INFO[Control.GetLabel(2)]</label>
@@ -252,7 +259,7 @@
 
 			<control type="button" id="103">
 				<width>1220</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
 				<label>$INFO[Control.GetLabel(3)]</label>
@@ -261,7 +268,7 @@
 
 			<control type="button" id="104">
 				<width>1220</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
 				<label>$INFO[Control.GetLabel(4)]</label>
@@ -270,7 +277,7 @@
 
 			<control type="button" id="105">
 				<width>1220</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
 				<label>$INFO[Control.GetLabel(5)]</label>
@@ -279,7 +286,7 @@
 
 			<control type="button" id="106">
 				<width>1220</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
 				<label>$INFO[Control.GetLabel(6)]</label>
@@ -288,7 +295,7 @@
 
 			<control type="button" id="107">
 				<width>1220</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
 				<label>$INFO[Control.GetLabel(7)]</label>
@@ -297,7 +304,7 @@
 
 			<control type="button" id="108">
 				<width>1220</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
 				<label>$INFO[Control.GetLabel(8)]</label>
@@ -306,7 +313,7 @@
 
 			<control type="button" id="109">
 				<width>1220</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
 				<label>$INFO[Control.GetLabel(9)]</label>
@@ -315,7 +322,7 @@
 
 			<control type="button" id="110">
 				<width>1220</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
 				<label>$INFO[Control.GetLabel(10)]</label>
@@ -324,7 +331,7 @@
 
 			<control type="button" id="111">
 				<width>1220</width>
-				<height>42</height>
+				
 				<font>Font33</font>
 				<textcolor>$VAR[UnFocusedColor]</textcolor>
 				<label>$INFO[Control.GetLabel(11)]</label>

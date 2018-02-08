@@ -4,14 +4,6 @@
 		<control type="group">
 			<visible>Control.IsVisible(50)</visible>
 			<!-- List -->
-			<control type="image">
-				<include>MediaInfoHideAnimation</include>
-				<left>960</left>
-				<top>0</top>
-				<width>960</width>
-				<height>1080</height>
-				<texture colordiffuse="$VAR[DiffuseColor]">views/fade.png</texture>
-			</control>
 			<control type="fixedlist" id="50">
 				<left>50</left>
 				<top>144</top>

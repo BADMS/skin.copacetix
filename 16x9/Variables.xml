@@ -220,6 +220,7 @@
 		<value>views/border_watched.png</value>
 	</variable>
 	<variable name="HomeBackgroundImage">
+		<value condition="String.StartsWith(Window.Property(xmlfile), Settings) | String.Contains(Window.Property(xmlfile), SkinSettings)">special://skin/resources/fanart.jpg</value>
 		<value condition="Control.HasFocus(9001) + !String.IsEmpty(Container(9001).ListItem.Property(Background))">$INFO[Container(9001).ListItem.Property(Background)]</value>
 		<value condition="!String.IsEmpty(Container(9000).ListItem.Property(Background))">$INFO[Container(9000).ListItem.Property(Background)]</value>
 		<value>special://skin/media/home.png</value>
@@ -512,9 +513,14 @@
 		<value>$INFO[ListItem.Title]</value>
 	</variable>
 	<variable name="Fanart">
+		<value condition="String.StartsWith(Window.Property(xmlfile), Settings) | String.Contains(Window.Property(xmlfile), SkinSettings)">special://skin/resources/fanart.jpg</value>
 		<value condition="Container.Content(episodes) + !String.IsEmpty(Container.Art(season.fanart))">$INFO[Container.Art(season.fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value>special://skin/media/home.png</value>
+	</variable>
+	<variable name="Fadeart">
+		<value condition="Control.HasFocus(3000) | Control.HasFocus(9000) | Control.HasFocus(9001) | Window.IsVisible(contextmenu) | Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsVisible(addoninformation)">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
+		<value>$VAR[Fanart]</value>
 	</variable>
 	<variable name="PictureFanart">
 		<value condition="!String.IsEmpty(ListItem.FileName)">$INFO[ListItem.FileNameAndPath]</value>

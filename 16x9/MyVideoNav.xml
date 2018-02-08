@@ -34,6 +34,14 @@
 			<include>OtherInfoHideAnimation</include>
 			<include>Fanart</include>
 		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<fadetime>400</fadetime>
+			<texture colordiffuse="$VAR[DiffuseColor]" diffuse="views/fadel.png">$VAR[Fadeart]</texture>
+		</control>
 		<!-- Main group -->
 		<control type="group" id="9104">
 			<visible>!Control.HasFocus(9000) + !Control.HasFocus(9001) + !Control.HasFocus(9901) + !Control.HasFocus(608)</visible>
@@ -61,7 +69,7 @@
 				<height>1080</height>
 				<onleft>50</onleft>
 				<onright>SetFocus(9000)</onright>
-				<showonepage>false</showonepage>
+				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<texturesliderbackground colordiffuse="$VAR[UnFocusedColor]">views/white_50.png</texturesliderbackground>
 				<texturesliderbar colordiffuse="$VAR[FocusedColor]">views/white_70.png</texturesliderbar>
@@ -77,7 +85,7 @@
 				<height>20</height>
 				<onup>50</onup>
 				<ondown>SetFocus(9000)</ondown>
-				<showonepage>false</showonepage>
+				<showonepage>true</showonepage>
 				<orientation>horizontal</orientation>
 				<texturesliderbackground colordiffuse="$VAR[UnFocusedColor]">views/white_50.png</texturesliderbackground>
 				<texturesliderbar colordiffuse="$VAR[FocusedColor]">views/white_70.png</texturesliderbar>
@@ -696,6 +704,9 @@
 			</content>
 		</control>
 		<include>GlobalMenu</include>
+		<control type="group">
+			<include>OtherInfoHideAnimation</include>
 			<include>Clock</include>
+		</control>
 	</controls>
 </window>

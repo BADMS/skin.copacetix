@@ -5,7 +5,7 @@
 			<visible>Control.IsVisible(522)</visible>
 			<!-- List -->
 			<control type="fixedlist" id="522">
-				<left>-860</left>
+				<left>0</left>
 				<top>270</top>
 				<width>2780</width>
 				<height>540</height>
@@ -14,8 +14,8 @@
 				<onup>3000</onup>
 				<ondown>60</ondown>
 				<pagecontrol>60</pagecontrol>
-				<preloaditems>2</preloaditems>
-				<focusposition>1</focusposition>
+				<preloaditems>3</preloaditems>
+				<focusposition>0</focusposition>
 				<orientation>horizontal</orientation>
 				<viewtype label="31522">list</viewtype>
 				<scrolltime tween="sine" easing="inout">360</scrolltime>
