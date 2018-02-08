@@ -17,7 +17,7 @@
 				<width>1920</width>
 				<height>400</height>
 				<include>DialogAnimation</include>
-				<texture colordiffuse="$VAR[DiffuseColor]">views/white_100.png</texture>
+				<texture colordiffuse="$VAR[DiffuseColor]">views/white_50.png</texture>
 			</control>
 			<control type="group">
 				<include content="DialogHeading">
@@ -51,21 +51,21 @@
 					<align>center</align>
 					<textoffsetx>40</textoffsetx>
 					<label>$PARAM[Button3Label]</label>
-					<texturenofocus></texturenofocus>
+					
 				</control>
 				<control type="button" id="10">
 					<width>auto</width>
 					<align>center</align>
 					<textoffsetx>40</textoffsetx>
 					<label>X</label>
-					<texturenofocus></texturenofocus>
+					
 				</control>
 				<control type="button" id="11">
 					<width>auto</width>
 					<align>center</align>
 					<textoffsetx>40</textoffsetx>
 					<label>$LOCALIZE[186]</label>
-					<texturenofocus></texturenofocus>
+					
 					<onclick condition="String.IsEmpty(Window(home).Property(copacetix_loaded))">ReplaceWindow(StartUp.xml)</onclick>
 				</control>
 			</control>

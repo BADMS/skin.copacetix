@@ -32,7 +32,7 @@
 			<textcolor>$VAR[TextColor]</textcolor>
 			<focusedcolor>00ffffff</focusedcolor>
 			<texturefocus></texturefocus>
-			<texturenofocus></texturenofocus>
+			
 		</control>
 		<!-- Dummy focus button grouplist -->
 		<control type="grouplist">
