@@ -103,10 +103,10 @@
 			</control>
 			<!-- Episode Icon -->
 			<control type="group">
-				<left>1130</left>
+				<left>1119</left>
 				<top>360</top>
 				<width>640</width>
-				<visible>!Window.IsVisible(contextmenu) + !String.Contains(ListItem.Icon,Default) + !Window.IsVisible(movieinformation) + !Control.HasFocus(3000) + [Container.Content(episodes) | Window.IsVisible(pictures)]</visible>
+				<visible>!Window.IsVisible(contextmenu) + !String.Contains(ListItem.Icon,Default) + !Control.HasFocus(3000) + [Container.Content(episodes) | Window.IsVisible(pictures)]</visible>
 				<control type="image">
 					<left>10</left>
 					<top>10</top>
@@ -122,6 +122,7 @@
 					<texture colordiffuse="$VAR[TextColor]" border="11,43,43,11">$VAR[BorderImage]</texture>
 				</control>
 				<control type="label">
+					<visible>!Window.IsVisible(contextmenu) + !String.Contains(ListItem.Icon,Default) + !Window.IsVisible(movieinformation) + !Control.HasFocus(3000) + [Container.Content(episodes) | Window.IsVisible(pictures)]</visible>
 					<right>0</right>
 					<top>386</top>
 					<width>640</width>
