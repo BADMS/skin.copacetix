@@ -170,7 +170,7 @@
 	<include name="Fanart">
 		<!-- global background -->
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" condition="String.Contains(ListItem.Icon,Default) | String.IsEmpty(Control.GetLabel(7975))">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" condition="String.IsEmpty(Control.GetLabel(7975))">Conditional</animation>
 			<control type="image" id="7975">
 				<include>FullscreenDimensions</include>
 				<fadetime>400</fadetime>
@@ -448,7 +448,7 @@
 		<focusedcolor>$VAR[TextColor]</focusedcolor>
 		<invalidcolor>$VAR[DisabledColor]</invalidcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-		<texturefocus colordiffuse="$VAR[DiffuseColor]">views/white_20.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[TextColor]">views/white_20.png</texturefocus>
 		<texturenofocus colordiffuse="$VAR[DisabledColor]">views/white_10.png</texturenofocus>
 	</include>
 	<!-- Conq -->

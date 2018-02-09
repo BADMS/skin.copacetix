@@ -519,7 +519,7 @@
 		<value>special://skin/media/home.png</value>
 	</variable>
 	<variable name="Fadeart">
-		<value condition="Control.HasFocus(3000) | Control.HasFocus(9000) | Control.HasFocus(9001) | Window.IsVisible(contextmenu) | Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsVisible(addoninformation)">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
+		<value condition="Control.HasFocus(3000) | Control.HasFocus(9000) | Control.HasFocus(9001) | Window.IsVisible(contextmenu) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsVisible(addoninformation)">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
 		<value>$VAR[Fanart]</value>
 	</variable>
 	<variable name="PictureFanart">

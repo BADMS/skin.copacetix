@@ -40,6 +40,7 @@
 
 		<!-- Dummy list -->
 		<control type="grouplist" id="9000">
+			<animation effect="fade" start="100" end="50" time="200" condition="Window.IsVisible(SettingsSystemInfo.xml)">Conditional</animation>
 			<left>120</left>
 			<top>120</top>
 			<width>300</width>
@@ -132,8 +133,8 @@
 
 		<!-- Main list -->
 		<control type="grouplist" id="50">
-			<left>480</left>
-			<top>244</top>
+			<left>420</left>
+			<top>120</top>
 			<width>1680</width>
 			<height>726</height>
 			<itemgap>34</itemgap>
@@ -224,10 +225,10 @@
 
 		<!-- Main list indicator -->
 		<control type="image">
-			<left>442</left>
-			<top>248</top>
+			<left>410</left>
+			<top>120</top>
 			<width>20</width>
-			<height>60</height>
+			<height>75</height>
 			<colordiffuse>$VAR[UnFocusedColor]</colordiffuse>
 			<texture border="6,1,8,1">common/ScrollBackground.png</texture>
 			<animation effect="fade" start="100" end="50" time="0" condition="!ControlGroup(50).HasFocus">Conditional</animation>
@@ -235,8 +236,8 @@
 
 		<!-- Default list -->
 		<control type="grouplist" id="500">
-			<left>830</left>
-			<top>244</top>
+			<left>720</left>
+			<top>120</top>
 			<width>970</width>
 			<height>726</height>
 			<itemgap>34</itemgap>
@@ -342,10 +343,10 @@
 
 		<!-- Sub list indicator -->
 		<control type="image">
-			<left>792</left>
-			<top>248</top>
+			<left>710</left>
+			<top>120</top>
 			<width>20</width>
-			<height>60</height>
+			<height>75</height>
 			<colordiffuse>$VAR[UnFocusedColor]</colordiffuse>
 			<texture border="6,1,8,1">common/ScrollBackground.png</texture>
 			<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(500).HasFocus">Conditional</animation>
@@ -353,7 +354,7 @@
 
 		<!-- XBMC info -->
 		<control type="textbox">
-			<left>830</left>
+			<left>720</left>
 			<top>856</top>
 			<width>970</width>
 			<height>118</height>

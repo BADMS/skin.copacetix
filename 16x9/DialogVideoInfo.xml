@@ -130,6 +130,7 @@
 				</control>
 				<!-- Button grouplist -->
 				<control type="grouplist">
+					<visible>!Control.HasFocus(50)</visible>
 					<bottom>50</bottom>
 					<height>75</height>
 					<itemgap>0</itemgap>
@@ -173,7 +174,7 @@
 			</control>
 			<!-- Cast -->
 			<control type="fixedlist" id="50">
-				<left>0</left>
+				<left>-120</left>
 				<top>270</top>
 				<width>2180</width>
 				<height>540</height>
@@ -227,11 +228,12 @@
 				</focusedlayout>
 			</control>
 			<control type="label">
-				<left>360</left>
+				<left>240</left>
 				<top>838</top>
-				<width>1510</width>
+				<width>100%</width>
 				<height>56</height>
 				<font>Med60</font>
+				<align>left</align>
 				<textcolor>$VAR[TextColor]</textcolor>
 				<label>$VAR[ActorRoleLabel]</label>
 				<visible>String.Contains(Control.GetLabel(5),$LOCALIZE[207])</visible>

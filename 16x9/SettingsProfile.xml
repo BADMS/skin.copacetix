@@ -39,6 +39,7 @@
 
 		<!-- Dummy list -->
 		<control type="grouplist" id="9000">
+			<animation effect="fade" start="100" end="50" time="200" condition="Window.IsVisible(SettingsProfile.xml)">Conditional</animation>
 			<left>120</left>
 			<top>120</top>
 			<width>300</width>
@@ -131,8 +132,8 @@
 
 		<!-- Main list -->
 		<control type="grouplist" id="50">
-			<left>480</left>
-			<top>244</top>
+			<left>420</left>
+			<top>120</top>
 			<width>1680</width>
 			<height>726</height>
 			<itemgap>34</itemgap>
@@ -179,10 +180,10 @@
 
 		<!-- Main list indicator -->
 		<control type="image">
-			<left>442</left>
-			<top>248</top>
+			<left>410</left>
+			<top>120</top>
 			<width>20</width>
-			<height>60</height>
+			<height>75</height>
 			<colordiffuse>$VAR[UnFocusedColor]</colordiffuse>
 			<texture border="6,1,8,1">common/ScrollBackground.png</texture>
 			<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
@@ -190,10 +191,10 @@
 
 		<!-- Default list -->
 		<control type="grouplist" id="500">
-			<left>830</left>
-			<top>244</top>
+			<left>720</left>
+			<top>120</top>
 			<width>970</width>
-			<height>194</height>
+			<height>304</height>
 			<itemgap>34</itemgap>
 			<onleft>ReplaceWindow(settings)</onleft>
 			<onright>noop</onright>
@@ -239,8 +240,8 @@
 		</control>
 
 		<control type="list" id="2">
-			<left>830</left>
-			<top>454</top>
+			<left>720</left>
+			<top>338</top>
 			<width>970</width>
 			<height>456</height>
 			<onleft>ReplaceWindow(settings)</onleft>
@@ -250,38 +251,32 @@
 			<orientation>vertical</orientation>
 			<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(500).HasFocus + !Control.HasFocus(2)">Conditional</animation>
 
-			<itemlayout height="76" width="970">
+			<itemlayout height="109" width="970">
 				<control type="label">
 					<width>900</width>
-					<height>76</height>
 					<font>Font33</font>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>$VAR[UnFocusedColor]</textcolor>
 				</control>
 				<control type="image">
-					<left>898</left>
-					<top>2</top>
-					<width>72</width>
-					<height>72</height>
+					<width>109</width>
+					<right>10</right>
 					<colordiffuse>$VAR[FocusedColor]</colordiffuse>
 					<texture fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</itemlayout>
 
-			<focusedlayout height="76" width="970">
+			<focusedlayout height="109" width="970">
 				<control type="label">
 					<width>900</width>
-					<height>76</height>
 					<font>Font33</font>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>$VAR[FocusedColor]</textcolor>
 					<animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(2)">Conditional</animation>
 				</control>
 				<control type="image">
-					<left>898</left>
-					<top>2</top>
-					<width>72</width>
-					<height>72</height>
+					<width>109</width>
+					<right>10</right>
 					<texture fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</focusedlayout>
@@ -290,10 +285,10 @@
 
 		<!-- Sub list indicator -->
 		<control type="image">
-			<left>792</left>
-			<top>248</top>
+			<left>710</left>
+			<top>120</top>
 			<width>20</width>
-			<height>60</height>
+			<height>75</height>
 			<colordiffuse>$VAR[UnFocusedColor]</colordiffuse>
 			<texture border="6,1,8,1">common/ScrollBackground.png</texture>
 		</control>
