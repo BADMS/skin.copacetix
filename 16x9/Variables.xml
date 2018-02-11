@@ -238,16 +238,16 @@
 		<value>$INFO[ListItem.Art(poster)]</value>
 	</variable>
 	<variable name="ScrollBack">
-		<value condition="Control.HasFocus(60)">66ffffff</value>
-		<value condition="Container.Scrolling">33ffffff</value>
+		<value condition="Control.HasFocus(60)">$VAR[BackgroundColor]</value>
+		<value condition="Container.Scrolling">$VAR[TextColor]</value>
 		<value>00ffffff</value>
 	</variable>
 	<variable name="ScrollBar">
-		<value condition="Container.Scrolling">33ffffff</value>
+		<value condition="Container.Scrolling">$VAR[TextColor]</value>
 		<value>00ffffff</value>
 	</variable>
 	<variable name="ScrollBarFO">
-		<value condition="Control.HasFocus(60)">66ffffff</value>
+		<value condition="Control.HasFocus(60)">$VAR[BackgroundColor]</value>
 		<value>00ffffff</value>
 	</variable>
 	<variable name="NextAiredDate200">

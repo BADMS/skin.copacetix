@@ -165,9 +165,9 @@
 					<width>920</width>
 					<height>20</height>
 					<info>Player.ProgressCache</info>
-					<texturebg colordiffuse="00ffffff" border="2">osd/OSDProgressBack.png</texturebg>
+					<texturebg colordiffuse="$VAR[BackgroundColor]" border="2">osd/OSDProgressBack.png</texturebg>
 					<lefttexture></lefttexture>
-					<midtexture colordiffuse="66ffffff" border="2">osd/OSDProgressBar.png</midtexture>
+					<midtexture colordiffuse="$VAR[TextColor]" border="2">osd/OSDProgressBar.png</midtexture>
 					<righttexture></righttexture>
 					<overlaytexture></overlaytexture>
 				</control>
