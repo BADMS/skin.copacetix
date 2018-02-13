@@ -215,7 +215,7 @@
 					<height>48</height>
 					<font>Font48</font>
 					<textcolor>$VAR[FocusedColor]</textcolor>
-					<label>$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Album, / ]$INFO[MusicPlayer.Artist, &#8226; ]</label>
+					<label>$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Album, / ]$INFO[MusicPlayer.Artist, | ]</label>
 				</control>
 
 				<!-- Plot -->
