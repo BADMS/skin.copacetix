@@ -1,1 +1,7 @@
-<colors/>
+<colors>
+	<color name="blue">FF6db9e5</color>
+	<color name="red">FFE10101</color>
+	<color name="orange">ffD6A51E</color>
+	<color name="green">FF00FF00</color>
+	<color name="yellow">fff5de50</color>
+</colors>

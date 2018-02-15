@@ -4,6 +4,10 @@
 	<defaultcontrol always="true">97</defaultcontrol>
 	<onload condition="System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<controls>
+		<control type="image" id="7975">
+			<top>2161</top>
+			<texture background="true" colordiffuse="$VAR[DiffuseColor]">$VAR[Fanart]</texture>
+		</control>
 		<!-- Cast Button -->
 		<control type="button" id="5">
 			<include>HiddenControl</include>

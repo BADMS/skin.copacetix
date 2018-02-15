@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- Copacetix -->
-<variable name="Durat_hh">
+	<variable name="RottenTomatoesIcon">
+		<value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)">special://skin/extras/misc/rtf.png</value>
+		<value condition="!Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)">special://skin/extras/misc/rts.png</value>
+	</variable>
+	<variable name="RottenTomatoesIconColour">
+		<value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)">red</value>
+		<value condition="!Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)">green</value>
+	</variable>
+	<variable name="CommunityRatingColour">
+		<value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating),59)">green</value>
+		<value condition="[Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating),39) + !Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating),59)]">orange</value>
+		<value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating),0) + !Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating),39)">red</value>
+        <value>$VAR[TextColor]</value>
+	</variable>
+	<variable name="Durat_hh">
         <value condition="Integer.IsGreaterOrEqual(ListItem.Duration,3600) + Integer.IsLess(ListItem.Duration,7200)">1</value>
         <value condition="Integer.IsLess(ListItem.Duration,10800)">2</value>
         <value condition="Integer.IsLess(ListItem.Duration,14400)">3</value>

@@ -87,19 +87,101 @@
 				<animation effect="fade" start="0" end="100" time="200" delay="800">Visible</animation>
 			</control>
 			<!-- Star Rating -->
-			<control type="image">
-				<include>MediaInfoHideAnimation</include>
-				<top>564</top>
-				<left>1045</left>
-				<width>147</width>
-				<height>70</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<aspectratio>keep</aspectratio>
-				<texture colordiffuse="$VAR[TextColor]">$VAR[StarRating]</texture>
+			<control type="grouplist">
 				<visible>!Listitem.DBType(season)</visible>
 				<visible>!Window.IsVisible(contextmenu) + !String.Contains(ListItem.Icon,Default) + Container.Content(movies) + !Control.HasFocus(3000) + !Container.OnNext + !Container.OnPrevious</visible>
 				<animation effect="fade" start="0" end="100" time="200" delay="800">Visible</animation>
+				<include>MediaInfoHideAnimation</include>
+				<top>564</top>
+				<left>1045</left>
+				<width>1678</width>
+				<height>70</height>
+				<orientation>horizontal</orientation>
+				<itemgap>6</itemgap>
+				<align>left</align>
+				<control type="image">
+					<width>147</width>
+					<height>70</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture colordiffuse="$VAR[TextColor]">$VAR[StarRating]</texture>
+				</control>
+				<control type="label" />
+				<control type="label" />
+				<control type="label" />
+				<control type="image">
+					<visible>!ListItem.IsParentFolder</visible>
+					<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
+					<width>70</width>
+					<height>70</height>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<texture colordiffuse="$VAR[CommunityRatingColour]">special://skin/extras/misc/metacritic.png</texture>
+					<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
+					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
+					<visible>!String.IsEqual(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating),n/a)</visible>
+				</control>
+				<control type="button">
+					<visible>!ListItem.IsParentFolder</visible>
+					<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
+					<width>auto</width>
+					<height>70</height>
+					<textoffsetx>0</textoffsetx>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating),,% ]</label>
+					<font>Thin48</font>
+					<textcolor>$VAR[TextColor]</textcolor>
+					<align>center</align>
+					<texturefocus colordiffuse="$VAR[CommunityRatingColour]"></texturefocus>
+					<texturenofocus colordiffuse="$VAR[CommunityRatingColour]"></texturenofocus>
+					<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
+					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
+					<visible>!String.IsEqual(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating),n/a)</visible>
+				</control>
+				<control type="image">
+					<visible>!ListItem.IsParentFolder</visible>
+					<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
+					<texture>$VAR[RottenTomatoesIcon]</texture>
+					<textcolor>$VAR[RottenTomatoesIconColour]</textcolor>
+					<width>70</width>
+					<height>70</height>
+					<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
+					<visible>!String.IsEqual(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),n/a)</visible>
+				</control>
+				<control type="label">
+					<visible>!ListItem.IsParentFolder</visible>
+					<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
+					<font>Thin48</font>
+					<textcolor>$VAR[TextColor]</textcolor>
+					<height>70</height>
+					<width>auto</width>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),,% ]</label>
+					<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
+					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
+					<visible>!String.IsEqual(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),n/a)</visible>
+				</control>
+				<control type="image">
+					<visible>!ListItem.IsParentFolder</visible>
+					<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
+					<width>70</width>
+					<height>70</height>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<texture>special://skin/extras/misc/imdb.png</texture>
+					<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
+					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
+				</control>
+				<control type="label">
+					<visible>!ListItem.IsParentFolder</visible>
+					<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
+					<font>Thin48</font>
+					<textcolor>$VAR[TextColor]</textcolor>
+					<height>70</height>
+					<width>auto</width>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.IMDB),, ]</label>
+					<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
+					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
+				</control>
 			</control>
 			<!-- Episode Icon -->
 			<control type="group">

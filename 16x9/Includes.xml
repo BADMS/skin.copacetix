@@ -85,6 +85,13 @@
 				</focusedlayout>
 				<content>
 					<item>
+						<label>Home</label>
+						<label2>Home</label2>
+						<property name="hasSubmenu">False</property>
+						<onclick>ActivateWindow(home)</onclick>
+						<visible>!Window.IsActive(home)</visible>
+					</item>
+					<item>
 						<label>Close</label>
 						<label2>Close</label2>
 						<property name="hasSubmenu">False</property>
@@ -97,6 +104,13 @@
 						<label2>Close</label2>
 						<property name="hasSubmenu">False</property>
 						<onclick>SetFocus(9103)</onclick>
+						<visible>!Window.IsActive(home)</visible>
+					</item>
+					<item>
+						<label>Home</label>
+						<label2>Home</label2>
+						<property name="hasSubmenu">False</property>
+						<onclick>ActivateWindow(home)</onclick>
 						<visible>!Window.IsActive(home)</visible>
 					</item>
 				</content>
