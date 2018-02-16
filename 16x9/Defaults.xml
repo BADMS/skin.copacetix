@@ -9,6 +9,7 @@
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 		<selectedcolor>$VAR[TextColor]</selectedcolor>
 		<scroll>false</scroll>
+		<shadowcolor>$VAR[TextShadowColour]</shadowcolor>
 	</default>
 	<default type="fadelabel">
 		<height>75</height>
@@ -19,6 +20,7 @@
 		<scrollout>false</scrollout>
 		<scrollspeed>40</scrollspeed>
 		<pauseatend>2000</pauseatend>
+		<shadowcolor>$VAR[TextShadowColour]</shadowcolor>
 	</default>
 	<default type="button">
 		<height>75</height>
@@ -34,6 +36,7 @@
 		<texturefocus colordiffuse="$VAR[TextColor]">views/white_20.png</texturefocus>
 		<texturenofocus colordiffuse="$VAR[UnFocusedColor]">views/white_10.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
+		<shadowcolor>$VAR[TextShadowColour]</shadowcolor>
 	</default>
 	<default type="togglebutton">
 		<height>75</height>
@@ -50,6 +53,7 @@
 		<alttexturefocus colordiffuse="$VAR[UnFocusedColor]">views/white_50.png</alttexturefocus>
 		<alttexturenofocus colordiffuse="$VAR[TextColor]">views/white_10.png</alttexturenofocus>
 		<pulseonselect>false</pulseonselect>
+		<shadowcolor>$VAR[TextShadowColour]</shadowcolor>
 	</default>
 	<default type="radiobutton">
 		<height>75</height>
@@ -72,6 +76,7 @@
 		<textureradioondisabled/>
 		<textureradiooffdisabled/>
 		<pulseonselect>false</pulseonselect>
+		<shadowcolor>$VAR[TextShadowColour]</shadowcolor>
 	</default>
 	<default type="spincontrolex">
 		<height>75</height>
@@ -95,6 +100,7 @@
 		<texturedowndisabled colordiffuse="$VAR[DisabledColor]">dialogs/spin_down.png</texturedowndisabled>
 		<reverse>yes</reverse>
 		<pulseonselect>false</pulseonselect>
+		<shadowcolor>$VAR[TextShadowColour]</shadowcolor>
 	</default>
 	<default type="spincontrol">
 		<height>75</height>
@@ -116,6 +122,7 @@
 		<texturedownfocus colordiffuse="$VAR[TextColor]">dialogs/spin_down.png</texturedownfocus>
 		<reverse>yes</reverse>
 		<pulseonselect>false</pulseonselect>
+		<shadowcolor>$VAR[TextShadowColour]</shadowcolor>
 	</default>
 	<default type="sliderex">
 		<height>75</height>
@@ -134,6 +141,7 @@
 		<textureslidernibfocus colordiffuse="$VAR[TextColor]">common/white.png</textureslidernibfocus>
 		<textoffsetx>10</textoffsetx>
 		<pulseonselect>false</pulseonselect>
+		<shadowcolor>$VAR[TextShadowColour]</shadowcolor>
 	</default>
 	<default type="slider">
 		<height>23</height>
@@ -152,6 +160,7 @@
 		<font>Font27</font>
 		<textcolor>$VAR[TextColor]</textcolor>
 		<autoscroll delay="8000" time="4000" repeat="12000">Skin.HasSetting(ScrollPlot)</autoscroll>
+		<shadowcolor>$VAR[TextShadowColour]</shadowcolor>
 	</default>
 	<default type="edit">
 		<height>75</height>
@@ -167,5 +176,6 @@
 		<texturefocus colordiffuse="$VAR[TextColor]">views/white_20.png</texturefocus>
 		<texturenofocus colordiffuse="$VAR[UnFocusedColor]">views/white_50.png</texturenofocus>
 		<pulseonselect>no</pulseonselect>
+		<shadowcolor>$VAR[TextShadowColour]</shadowcolor>
 	</default>
 </includes>

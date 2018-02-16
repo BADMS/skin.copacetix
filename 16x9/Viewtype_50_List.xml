@@ -113,9 +113,9 @@
 				<control type="image">
 					<visible>!ListItem.IsParentFolder</visible>
 					<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
-					<width>70</width>
+					<width>60</width>
 					<height>70</height>
-					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture colordiffuse="$VAR[CommunityRatingColour]">special://skin/extras/misc/metacritic.png</texture>
 					<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
 					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
@@ -128,7 +128,7 @@
 					<height>70</height>
 					<textoffsetx>0</textoffsetx>
 					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating),,% ]</label>
-					<font>Thin48</font>
+					<font>Thin33</font>
 					<textcolor>$VAR[TextColor]</textcolor>
 					<align>center</align>
 					<texturefocus colordiffuse="$VAR[CommunityRatingColour]"></texturefocus>
@@ -142,17 +142,17 @@
 					<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
 					<texture>$VAR[RottenTomatoesIcon]</texture>
 					<textcolor>$VAR[RottenTomatoesIconColour]</textcolor>
-					<width>70</width>
+					<width>60</width>
 					<height>70</height>
 					<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
-					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
 					<visible>!String.IsEqual(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),n/a)</visible>
 				</control>
 				<control type="label">
 					<visible>!ListItem.IsParentFolder</visible>
 					<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
-					<font>Thin48</font>
+					<font>Thin33</font>
 					<textcolor>$VAR[TextColor]</textcolor>
 					<height>70</height>
 					<width>auto</width>
@@ -164,9 +164,9 @@
 				<control type="image">
 					<visible>!ListItem.IsParentFolder</visible>
 					<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
-					<width>70</width>
+					<width>60</width>
 					<height>70</height>
-					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture>special://skin/extras/misc/imdb.png</texture>
 					<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
 					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
@@ -174,7 +174,7 @@
 				<control type="label">
 					<visible>!ListItem.IsParentFolder</visible>
 					<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
-					<font>Thin48</font>
+					<font>Thin33</font>
 					<textcolor>$VAR[TextColor]</textcolor>
 					<height>70</height>
 					<width>auto</width>

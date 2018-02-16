@@ -640,6 +640,28 @@
 					<visible>ControlGroup(9).HasFocus(11)</visible>
 				</control>
 
+				<!-- Text Shadows -->
+				<control type="radiobutton" id="1009">
+					<width>1200</width>
+					<height>66</height>
+					<textwidth>1120</textwidth>
+					<label>Enable text shadows</label>
+					<onclick>Skin.ToggleSetting(Text.Shadow.Enable)</onclick>
+					<selected>Skin.HasSetting(Text.Shadow.Enable)</selected>
+					<visible>ControlGroup(9).HasFocus(11)</visible>
+				</control>
+
+				<!-- Logo Options -->
+				<control type="radiobutton" id="1010">
+					<width>1200</width>
+					<height>66</height>
+					<textwidth>1120</textwidth>
+					<label>Enable character art</label>
+					<onclick>Skin.ToggleSetting(Logo.Art.Enable)</onclick>
+					<selected>Skin.HasSetting(Logo.Art.Enable)</selected>
+					<visible>ControlGroup(9).HasFocus(11)</visible>
+				</control>
+
 				<!-- Optional addons -->
 				<!-- Skin Shortcuts script -->
 				<control type="button" id="1200">

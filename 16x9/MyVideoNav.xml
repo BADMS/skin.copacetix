@@ -108,8 +108,6 @@
 			<top>144</top>
 			<width>860</width>
 			<height>896</height>
-			<onup>50</onup>
-			<ondown>50</ondown>
 			<onback>50</onback>
 			<onleft condition="String.IsEmpty(Container(3000).ListItem.Property(ActionLeft))">50</onleft>
 			<onright condition="String.IsEmpty(Container(3000).ListItem.Property(ActionRight))">50</onright>

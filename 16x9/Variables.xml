@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- Copacetix -->
+	<variable name="LogosArt">
+		<value condition="!String.IsEmpty(ListItem.Art(characterart))">$INFO[ListItem.Art(characterart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(characterart))">$INFO[ListItem.Art(clearart)]</value>
+		<value condition="String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(characterart)) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Clearart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+		<value>$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo)]</value>
+	</variable>
+	<variable name="TextShadowColour">
+		<value condition="Skin.HasSetting(Text.Shadow.Enable)">$VAR[DiffuseColor]</value>
+	</variable>
 	<variable name="RottenTomatoesIcon">
 		<value condition="Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)">special://skin/extras/misc/rtf.png</value>
 		<value condition="!Integer.IsGreater(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)">special://skin/extras/misc/rts.png</value>

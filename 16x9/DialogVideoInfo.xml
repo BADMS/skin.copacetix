@@ -31,6 +31,27 @@
 		</control>
 		<control type="group">
 			<include>InfoDialogFadeAnimation</include>
+			<control type="image">
+				<visible>Skin.HasSetting(Text.Shadow.Enable)</visible>
+				<right>-5</right>
+				<bottom>-5</bottom>
+				<width>50%</width>
+				<height>50%</height>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<texture background="true" diffuse="special://skin/extras/misc/shadowmask.png">$VAR[LogosArt]</texture>
+				<colordiffuse>$VAR[TextShadowColour]</colordiffuse>
+				<fadetime>400</fadetime>
+			</control>
+			<control type="image">
+				<right>0</right>
+				<bottom>0</bottom>
+				<width>50%</width>
+				<height>50%</height>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<texture background="true">$VAR[LogosArt]</texture>
+				<fadetime>400</fadetime>
+				<visible>Skin.HasSetting(Logo.Art.Enable) + [Skin.HasSetting(LogosInfo) | Skin.HasSetting(LogosBoth)]</visible>
+			</control>
 			<control type="group">
 				<left>50</left>
 				<left>1132</left>
@@ -61,74 +82,160 @@
 						<height>248</height>
 						<aspectratio scalediffuse="false">keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-						<visible>Skin.HasSetting(LogosInfo) | Skin.HasSetting(LogosBoth)</visible>
+						<visible>!Skin.HasSetting(Logo.Art.Enable) + [Skin.HasSetting(LogosInfo) | Skin.HasSetting(LogosBoth)]</visible>
 					</control>
 					<!-- Details Line 1 -->
-					<control type="label">
-						<top>345</top>
-						<width>78%</width>
-						<height>36</height>
-						<font>Med36</font>
-						<textcolor>$VAR[TextColor]</textcolor>
-						<label>$VAR[DialogVideoInfoLine1]</label>
-					</control>
+					<control type="group">
+						<animation type="Conditional" condition="Skin.HasSetting(Logo.Art.Enable) + [Skin.HasSetting(LogosInfo) | Skin.HasSetting(LogosBoth)]" reversible="true">
+							<effect type="slide" end="0,0" time="0"/>
+						</animation>
+						<control type="label">
+							<top>345</top>
+							<width>78%</width>
+							<height>36</height>
+							<font>Med36</font>
+							<textcolor>$VAR[TextColor]</textcolor>
+							<label>$VAR[DialogVideoInfoLine1]</label>
+						</control>
+						<!-- Star Rating -->
+						<control type="image">
+							<right>0</right>
+							<top>351</top>
+							<width>147</width>
+							<height>24</height>
+							<aspectratio>keep</aspectratio>
+							<texture colordiffuse="$VAR[TextColor]">$VAR[StarRating]</texture>
+							<visible>!Listitem.DBType(season)</visible>
+						</control>
+						<!-- Details Line 2 -->
+						<control type="label">
+							<top>388</top>
+							<height>66</height>
+							<aligny>top</aligny>
+							<font>Light33</font>
+							<textcolor>$VAR[TextColor]</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<label>$VAR[DialogVideoInfoLine2]</label>
+						</control>
 					<!-- Star Rating -->
-					<control type="image">
-						<right>0</right>
-						<top>351</top>
-						<width>147</width>
-						<height>24</height>
-						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[TextColor]">$VAR[StarRating]</texture>
-						<visible>!Listitem.DBType(season)</visible>
-					</control>
-					<!-- Details Line 2 -->
-					<control type="label">
-						<top>388</top>
-						<height>66</height>
-						<aligny>top</aligny>
-						<font>Light33</font>
-						<textcolor>$VAR[TextColor]</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<label>$VAR[DialogVideoInfoLine2]</label>
-					</control>
-					<!-- Plot -->
-					<control type="textbox">
-						<top>479</top>
-						<height>195</height>
-						<font>Light27</font>
-						<label>$VAR[Plot]</label>
-						<textcolor>$VAR[TextColor]</textcolor>
-						<autoscroll delay="10000" time="2000" repeat="12000">True</autoscroll>
-					</control>
 					<control type="grouplist">
-						<top>730</top>
-						<height>109</height>
-						<itemgap>100</itemgap>
+						<top>438</top>
+						<width>1920</width>
+						<height>40</height>
 						<orientation>horizontal</orientation>
-						<usecontrolcoords>true</usecontrolcoords>
-						<!-- Studio Flag -->
+						<itemgap>6</itemgap>
+						<align>left</align>
 						<control type="image">
-							<width>120</width>
-							<height>80</height>
-							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[TextColor]" fallback="flags/default_studio.png">$INFO[ListItem.Studio,flags/studios/,.png]</texture>
-							<visible>!String.IsEmpty(ListItem.Studio)</visible>
+							<visible>!ListItem.IsParentFolder</visible>
+							<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
+							<width>40</width>
+							<height>40</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture colordiffuse="$VAR[CommunityRatingColour]">special://skin/extras/misc/metacritic.png</texture>
+							<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
+							<visible>!String.IsEqual(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating),n/a)</visible>
 						</control>
-						<!-- MPAA Rating Flag -->
-						<control type="image">
-							<width>120</width>
-							<height>80</height>
-							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[TextColor]" fallback="flags/default_rating.png">$VAR[Info_Certificate]</texture>
-							<visible>!String.IsEmpty(ListItem.MPAA)</visible>
+						<control type="button">
+							<visible>!ListItem.IsParentFolder</visible>
+							<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
+							<width>auto</width>
+							<height>40</height>
+							<textoffsetx>0</textoffsetx>
+							<label>$INFO[Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating),,% ]</label>
+							<font>Light27</font>
+							<textcolor>$VAR[TextColor]</textcolor>
+							<align>center</align>
+							<texturefocus colordiffuse="$VAR[CommunityRatingColour]"></texturefocus>
+							<texturenofocus colordiffuse="$VAR[CommunityRatingColour]"></texturenofocus>
+							<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
+							<visible>!String.IsEqual(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating),n/a)</visible>
 						</control>
-						<!-- Source Flag -->
 						<control type="image">
-							<width>120</width>
-							<height>80</height>
-							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[TextColor]">$VAR[Video_Source]</texture>
+							<visible>!ListItem.IsParentFolder</visible>
+							<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
+							<texture>$VAR[RottenTomatoesIcon]</texture>
+							<textcolor>$VAR[RottenTomatoesIconColour]</textcolor>
+							<width>40</width>
+							<height>40</height>
+							<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
+							<visible>!String.IsEqual(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),n/a)</visible>
+						</control>
+						<control type="label">
+							<visible>!ListItem.IsParentFolder</visible>
+							<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
+							<font>Light27</font>
+							<textcolor>$VAR[TextColor]</textcolor>
+							<height>40</height>
+							<width>auto</width>
+							<label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),,% ]</label>
+							<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
+							<visible>!String.IsEqual(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),n/a)</visible>
+						</control>
+						<control type="image">
+							<visible>!ListItem.IsParentFolder</visible>
+							<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
+							<width>40</width>
+							<height>40</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture>special://skin/extras/misc/imdb.png</texture>
+							<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
+						</control>
+						<control type="label">
+							<visible>!ListItem.IsParentFolder</visible>
+							<visible>!String.IsEmpty(ListItem.DBTYPE)</visible>
+							<font>Light27</font>
+							<textcolor>$VAR[TextColor]</textcolor>
+							<height>40</height>
+							<width>auto</width>
+							<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.IMDB),, ]</label>
+							<visible>![String.IsEqual(Listitem.Label, ..) | String.IsEqual(ListItem(1).Label, $LOCALIZE[20366])]</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
+						</control>
+					</control>
+						<!-- Plot -->
+						<control type="textbox">
+							<top>479</top>
+							<height>200</height>
+							<font>Light27</font>
+							<label>$VAR[Plot]</label>
+							<textcolor>$VAR[TextColor]</textcolor>
+							<autoscroll delay="10000" time="2000" repeat="12000">True</autoscroll>
+						</control>
+						<control type="grouplist">
+							<top>730</top>
+							<height>109</height>
+							<itemgap>100</itemgap>
+							<orientation>horizontal</orientation>
+							<usecontrolcoords>true</usecontrolcoords>
+							<!-- Studio Flag -->
+							<control type="image">
+								<width>120</width>
+								<height>80</height>
+								<aspectratio>keep</aspectratio>
+								<texture colordiffuse="$VAR[TextColor]" fallback="flags/default_studio.png">$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+								<visible>!String.IsEmpty(ListItem.Studio)</visible>
+							</control>
+							<!-- MPAA Rating Flag -->
+							<control type="image">
+								<width>120</width>
+								<height>80</height>
+								<aspectratio>keep</aspectratio>
+								<texture colordiffuse="$VAR[TextColor]" fallback="flags/default_rating.png">$VAR[Info_Certificate]</texture>
+								<visible>!String.IsEmpty(ListItem.MPAA)</visible>
+							</control>
+							<!-- Source Flag -->
+							<control type="image">
+								<width>120</width>
+								<height>80</height>
+								<aspectratio>keep</aspectratio>
+								<texture colordiffuse="$VAR[TextColor]">$VAR[Video_Source]</texture>
+							</control>
 						</control>
 					</control>
 				</control>
