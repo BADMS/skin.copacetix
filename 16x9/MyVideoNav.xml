@@ -699,6 +699,12 @@
 					<label2>$LOCALIZE[13350]</label2>
 					<visible>!String.Contains(Playlist.Length(video),0)</visible>
 				</item>
+				<item>
+					<onclick>SetFocus(50)</onclick>
+					<onclick>ActivateWindow(settings)</onclick>
+					<label>$LOCALIZE[31067]</label>
+					<label2>$LOCALIZE[31067]</label2>
+				</item>
 			</content>
 		</control>
 		<include>GlobalMenu</include>
